@@ -1,0 +1,74 @@
+# システム設定例（実際の設定は config.yaml に記述）
+
+data_collection:
+  base_url: "https://db.netkeiba.com"
+  request_interval: 1.0  # 秒
+  timeout: 30
+  user_agent: "Mozilla/5.0 (compatible; KeibaAI/1.0)"
+  max_retries: 3
+
+preprocessing:
+  missing_value_strategy: "median"  # median, mean, forward_fill, drop
+  outlier_threshold: 3.0  # 標準偏差の倍数
+  normalization: "standard"  # standard, minmax, robust
+
+models:
+  save_directory: "models/"
+  versioning: true
+  auto_save: true
+
+agents:
+  past_performance:
+    weight: 0.25
+    model_type: "lightgbm"
+    n_estimators: 500
+    learning_rate: 0.05
+  
+  distance_adaptability:
+    weight: 0.20
+    model_type: "lightgbm"
+  
+  jockey_trainer:
+    weight: 0.15
+    model_type: "xgboost"
+  
+  pedigree:
+    weight: 0.10
+    model_type: "lightgbm"
+  
+  race_pace:
+    weight: 0.10
+    model_type: "lightgbm"
+  
+  physical_condition:
+    weight: 0.10
+    model_type: "lightgbm"
+  
+  odds_analysis:
+    weight: 0.05
+    model_type: "xgboost"
+  
+  statistical_pattern:
+    weight: 0.03
+    model_type: "lightgbm"
+  
+  anomaly_detection:
+    weight: 0.02
+    model_type: "isolation_forest"
+
+orchestrator:
+  parallel_execution: true
+  max_workers: 9
+  cache_enabled: true
+  cache_ttl: 3600  # 秒
+
+betting:
+  min_ev: 0.05  # 5%
+  kelly_fraction: 0.5  # 1/2ケリー
+  max_bet_fraction: 0.05  # 資金の最大5%
+  min_bet_amount: 100  # 円
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/keiba_ai.log"
