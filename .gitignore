@@ -4,6 +4,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
+env/
+venv/
+ENV/
 build/
 develop-eggs/
 dist/
@@ -20,11 +23,12 @@ wheels/
 .installed.cfg
 *.egg
 
-# 仮想環境
-venv/
-env/
-ENV/
-.venv
+# テスト
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
 
 # IDE
 .vscode/
@@ -34,35 +38,23 @@ ENV/
 *~
 .DS_Store
 
-# データファイル（大容量）
-data/raw/**/*.csv
-data/raw/**/*.json
-data/processed/**/*.csv
-data/processed/**/*.parquet
+# プロジェクト固有
+data/raw/*.csv
+data/processed/*.csv
+data/interim/*.csv
+logs/*.log
+models/*.pkl
+models/*.h5
+*.db
+*.sqlite
 
-# モデルファイル（大容量）
-models/**/*.pkl
-models/**/*.joblib
-models/**/*.h5
-models/**/*.pt
-
-# ログ・レポート
-logs/**/*.log
-logs/**/*.txt
-reports/**/*.html
-reports/**/*.pdf
-
-# Jupyter
-notebooks/**/*.ipynb
-.ipynb_checkpoints/
-
-# 環境変数・秘密情報
+# 環境設定
 .env
 .env.local
-config/config.yaml
-config/*_secret.yaml
 
-# テストキャッシュ
-.pytest_cache/
-.coverage
-htmlcov/
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# ドキュメント
+docs/_build/
