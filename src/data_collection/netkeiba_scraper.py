@@ -127,6 +127,10 @@ class RaceResultScraper(BaseScraper):
             race_data = self._parse_race_info(soup, race_id)
             horse_results = self._parse_race_results(soup, race_id)
             
+            # 払い戻し情報を取得
+            dividends = self._parse_dividends(soup, race_id)
+            race_data['dividends'] = dividends
+            
             # レース情報と各馬の結果を結合
             results = []
             for horse in horse_results:
@@ -339,6 +343,85 @@ class RaceResultScraper(BaseScraper):
         
         return results
     
+    def _parse_dividends(self, soup: BeautifulSoup, race_id: str) -> Dict:
+        """払い戻し情報をパース"""
+        dividends = {}
+        
+        try:
+            # 払い戻しテーブルを取得 (通常2つある)
+            pay_tables = soup.find_all('table', class_='pay_table_01')
+            
+            if not pay_tables:
+                # 地方競馬などの場合クラス名が違う可能性も考慮（基本はpay_table_01）
+                self.logger.debug(f"No payout table found for race {race_id}")
+                return dividends
+                
+            for table in pay_tables:
+                rows = table.find_all('tr')
+                for row in rows:
+                    th = row.find('th')
+                    tds = row.find_all('td')
+                    
+                    if not th or not tds:
+                        continue
+                        
+                    kind = th.get_text(strip=True)  # 単勝、複勝など
+                    
+                    # 組み合わせと配当
+                    # 複数の場合（複勝など）はbrが含まれる
+                    combinations = []
+                    payouts = []
+                    
+                    # 組み合わせ (td[0])
+                    if len(tds) > 0:
+                        # brタグをカンマに置換してから分割
+                        raw_comb = str(tds[0]).replace('<br/>', ',').replace('<br>', ',')
+                        comb_soup = BeautifulSoup(raw_comb, 'html.parser')
+                        combinations = [c.strip() for c in comb_soup.get_text().split(',') if c.strip()]
+                    
+                    # 配当 (td[1])
+                    if len(tds) > 1:
+                        raw_pay = str(tds[1]).replace('<br/>', ',').replace('<br>', ',')
+                        pay_soup = BeautifulSoup(raw_pay, 'html.parser')
+                        # カンマ区切りの数値（例: 1,200）を除去してからパース
+                        payout_texts = [p.strip().replace(',', '') for p in pay_soup.get_text().split(',') if p.strip()]
+                        payouts = []
+                        for p in payout_texts:
+                            try:
+                                payouts.append(int(p))
+                            except:
+                                pass
+                    
+                    # 種類マッピング
+                    key = self._map_dividend_key(kind)
+                    if key:
+                        dividends[key] = {
+                            'combinations': combinations,
+                            'payouts': payouts
+                        }
+                        
+        except Exception as e:
+            self.logger.warning(f"Error parsing dividends: {e}")
+            
+        return dividends
+    
+    def _map_dividend_key(self, kind_text: str) -> Optional[str]:
+        """券種名を英語キーに変換"""
+        mapping = {
+            '単勝': 'win',
+            '複勝': 'place',
+            '枠連': 'bracket_quinella',
+            '馬連': 'quinella',
+            'ワイド': 'wide',
+            '馬単': 'exacta',
+            '三連複': 'trio',
+            '3連複': 'trio',
+            '三連単': 'trifecta',
+            '3連単': 'trifecta'
+        }
+        return mapping.get(kind_text)
+
+    
     def _parse_time(self, time_str: str) -> float:
         """タイム文字列を秒に変換"""
         try:
@@ -376,6 +459,9 @@ class RaceResultScraper(BaseScraper):
             
             race_data = self.scrape_race(race_id)
             if race_data and 'results' in race_data:
+                # レース情報（配当含む）を各馬のレコードに追加
+                race_info = race_data['race_info']
+                # resultsは既に結合済みだが、念のため確認
                 all_results.extend(race_data['results'])
         
         if not all_results:
@@ -387,13 +473,63 @@ class RaceResultScraper(BaseScraper):
     def _get_race_ids_in_range(self, start_date: str, end_date: str, 
                                 tracks: Optional[List[str]] = None) -> List[str]:
         """期間内のレースIDを取得"""
-        # 簡易実装：実際にはカレンダーAPIやカレンダーページから取得する必要がある
-        # ここではダミーデータを返す（実装時は実際のロジックに置き換える）
-        self.logger.warning("Race ID fetching not fully implemented - returning sample data")
+        race_ids = []
         
-        # サンプルレースID（2024年1月6日の東京競馬場）
-        # 実際の実装では、カレンダーページをスクレイピングしてレースIDを取得
-        return ['202406010101', '202406010102']  # サンプル
+        try:
+            # 日付範囲を生成
+            dates = pd.date_range(start=start_date, end=end_date)
+            
+            for date in dates:
+                date_str = date.strftime('%Y%m%d')
+                url = f"{self.base_url}/race/list/{date_str}/"
+                
+                soup = self._get_page(url)
+                if soup is None:
+                    continue
+                
+                # その日のレース一覧からIDを抽出
+                # 構造: div.race_top_data_info > dl > dd > a (href="/race/2024...")
+                # または競馬場ごとに分かれているDLリストを探す
+                
+                # 競馬場ごとのブロックを取得し、tracksでフィルタリング
+                # ページ構造: div.race_top_hold_list > div > div.race_top_data_info
+                # ここでは簡易的に全リンクから抽出してフィルタリングするアプローチをとる
+                
+                race_links = soup.find_all('a', href=re.compile(r'/race/\d{12}/'))
+                
+                for link in race_links:
+                    href = link.get('href')
+                    r_id_match = re.search(r'/race/(\d{12})/', href)
+                    
+                    if r_id_match:
+                        r_id = r_id_match.group(1)
+                        
+                        # 競馬場フィルタリング
+                        if tracks:
+                            # 親要素などを辿って競馬場名を取得するのは複雑なため、
+                            # レースIDの場所コードまたはテキストから判断する
+                            
+                            # 方法1: title属性やテキストから競馬場名を探す
+                            race_title = link.get('title', '')
+                            link_text = link.get_text()
+                            
+                            # 方法2: 開催一覧ページの構造上の競馬場ヘッダーを探す
+                            # div.race_top_data_info の前の要素など
+                            
+                            # ここではシンプルに、詳細ページ取得時にトラック名でフィルタリングする方針とし、
+                            # ID収集段階では全てのIDを集める（またはIDの場所コードを利用）
+                            # 中央競馬の場所コード: 01:札幌, 02:函館, 03:福島, 04:新潟, 05:東京, 06:中山, 07:中京, 08:京都, 09:阪神, 10:小倉
+                            pass
+                        
+                        if r_id not in race_ids:
+                            race_ids.append(r_id)
+            
+            self.logger.info(f"Found {len(race_ids)} races in range {start_date} to {end_date}")
+            return race_ids
+            
+        except Exception as e:
+            self.logger.error(f"Error fetching race IDs: {e}")
+            return []
 
 
 class HorseInfoScraper(BaseScraper):

@@ -238,6 +238,62 @@ class TestRaceResultScraper:
         
         assert not df.empty
         assert len(df) > 0
+    
+    @patch('requests.Session.get')
+    def test_get_race_ids_in_range(self, mock_get, mock_config):
+        """レースID取得機能のテスト"""
+        # 開催一覧ページのモックHTML
+        html = """
+        <html>
+            <div class="race_top_data_info">
+                <dl>
+                    <dd><a href="/race/202401010101/" title="レース1">レース1</a></dd>
+                    <dd><a href="/race/202401010102/" title="レース2">レース2</a></dd>
+                </dl>
+            </div>
+        </html>
+        """
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.content = html.encode('utf-8')
+        mock_get.return_value = mock_response
+        
+        scraper = RaceResultScraper(mock_config)
+        ids = scraper._get_race_ids_in_range('2024-01-01', '2024-01-01')
+        
+        assert len(ids) == 2
+        assert '202401010101' in ids
+        assert '202401010102' in ids
+
+    def test_parse_dividends(self, mock_config):
+        """払い戻し情報のパーステスト"""
+        html = """
+        <table class="pay_table_01">
+            <tr>
+                <th>単勝</th>
+                <td>1</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <th>複勝</th>
+                <td>1<br>2</td>
+                <td>110<br>150</td>
+            </tr>
+        </table>
+        """
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(html, 'html.parser')
+        
+        scraper = RaceResultScraper(mock_config)
+        dividends = scraper._parse_dividends(soup, 'dummy_id')
+        
+        assert 'win' in dividends
+        assert dividends['win']['payouts'] == [250]
+        assert dividends['win']['combinations'] == ['1']
+        
+        assert 'place' in dividends
+        assert dividends['place']['payouts'] == [110, 150]
+        assert set(dividends['place']['combinations']) == {'1', '2'}
 
 
 class TestHorseInfoScraper:
