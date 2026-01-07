@@ -1,0 +1,30 @@
+# データ収集システムの依存パッケージ
+
+# Webスクレイピング
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# データ処理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# CLI
+click>=8.1.0
+rich>=13.0.0
+
+# 設定ファイル
+PyYAML>=6.0
+
+# テスト
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+
+# コード品質
+flake8>=6.0.0
+black>=23.0.0
+mypy>=1.4.0
+
+# ログ
+python-dateutil>=2.8.0

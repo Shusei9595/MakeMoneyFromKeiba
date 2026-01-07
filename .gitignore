@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# テスト
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# プロジェクト固有
+data/raw/*.csv
+data/processed/*.csv
+data/interim/*.csv
+logs/*.log
+models/*.pkl
+models/*.h5
+*.db
+*.sqlite
+
+# 環境設定
+.env
+.env.local
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# ドキュメント
+docs/_build/

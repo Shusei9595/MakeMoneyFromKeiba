@@ -1,0 +1,57 @@
+# データ収集設定
+
+base_url: "https://db.netkeiba.com"
+request_interval: 1.0  # リクエスト間隔（秒）
+timeout: 30  # タイムアウト（秒）
+user_agent: "Mozilla/5.0 (compatible; MakeMoneyFromKeiba/1.0; +https://github.com/yourusername/MakeMoneyFromKeiba)"
+max_retries: 3
+
+# 収集対象競馬場
+tracks:
+  central:  # 中央競馬
+    - "東京"
+    - "中山"
+    - "京都"
+    - "阪神"
+    - "中京"
+    - "新潟"
+    - "福島"
+    - "小倉"
+    - "札幌"
+    - "函館"
+  
+  local:  # 地方競馬（Phase 2以降で対応）
+    - "大井"
+    - "川崎"
+    - "船橋"
+    - "浦和"
+
+# 収集するデータ種類
+data_types:
+  - race_results      # レース結果
+  - horse_info        # 馬情報
+  - jockey_info       # 騎手情報
+  - trainer_info      # 調教師情報
+  - odds_data         # オッズデータ
+
+# オッズ種類
+odds_types:
+  - win        # 単勝
+  - place      # 複勝
+  - quinella   # 馬連
+  - exacta     # 馬単
+  - wide       # ワイド
+  - trio       # 3連複
+  - trifecta   # 3連単
+
+# エラーハンドリング
+error_handling:
+  retry_delay: 2.0  # リトライまでの待機時間（秒）
+  exponential_backoff: true  # 指数バックオフを使用
+  skip_on_error: true  # エラー時はスキップして続行
+
+# 出力設定
+output:
+  format: "csv"  # csv, parquet, json
+  encoding: "utf-8-sig"  # UTF-8 with BOM（Excelで開く用）
+  compression: null  # null, gzip, bz2, xz
