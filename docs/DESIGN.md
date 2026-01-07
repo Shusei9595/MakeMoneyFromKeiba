@@ -55,26 +55,42 @@
 
 #### マルチエージェントシステム (Multi-Agent System)
 - **責務**: 9つの専門家AIによる予測生成
+- **実装**: `src/agents/` ディレクトリ
 - **構成**:
 
-| エージェント | 重み | 責務 |
-|-------------|------|------|
-| 前走パフォーマンスAI | 25% | 直近レース成績の分析 |
-| 距離・コース適性AI | 20% | 距離・コース相性の評価 |
-| 騎手・調教師AI | 15% | 人的要因の分析 |
-| 血統AI | 10% | 血統からの適性判断 |
-| レース展開AI | 10% | ペース・展開予測 |
-| 馬体・調教AI | 10% | コンディション評価 |
-| オッズ分析AI | 5% | 市場情報の分析 |
-| 統計パターンAI | 3% | 歴史的パターン認識 |
-| 異常値検出AI | 2% | リスク・異常検出 |
+| エージェント | ファイル | 重み | 責務 |
+|-------------|---------|------|------|
+| 前走パフォーマンスAI | `past_performance_agent.py` | 20% | 直近レース成績の分析 |
+| 距離・コース適性AI | `distance_adaptability_agent.py` | 15% | 距離・コース相性の評価 |
+| 騎手・調教師AI | `jockey_trainer_agent.py` | 15% | 人的要因の分析 |
+| 血統AI | `pedigree_agent.py` | 10% | 血統からの適性判断 |
+| レース展開AI | `race_pace_agent.py` | 12% | ペース・展開予測 |
+| 馬体・調教AI | `physical_condition_agent.py` | 8% | コンディション評価 |
+| 馬場・天候AI | `track_condition_agent.py` | 10% | 馬場状態の分析 |
+| 統計パターンAI | `statistical_pattern_agent.py` | 5% | 歴史的パターン認識 |
+| オッズ分析AI | `odds_analysis_agent.py` | 5% | 市場情報の分析 |
+
+- **基底クラス**: `base_agent.py` - LightGBM Regressorで10点満点スコアを予測
+
+#### オーケストレーター (Orchestrator)
+- **責務**: エージェント統合・勝率予測・EV計算・買い目生成
+- **実装**: `src/orchestrator/` ディレクトリ
+- **構成**:
+
+| モジュール | ファイル | 責務 |
+|-----------|---------|------|
+| エージェント管理 | `agent_manager.py` | 9エージェントの並列実行 |
+| 重み最適化 | `weight_optimizer.py` | 静的/動的重み付け |
+| 予測統合 | `prediction_orchestrator.py` | スコア統合・勝率算出 |
+| EV計算 | `ev_calculator.py` | 券種別期待値計算 |
+| 買い目推奨 | `betting_recommender.py` | ケリー基準で資金配分 |
 
 #### 結果集約モジュール (Result Aggregator Module)
 - **責務**: 各エージェントの予測を統合
 - **機能**:
-  - 重み付けアンサンブル
-  - 期待値(EV)計算
-  - 推奨ベット戦略生成
+  - 重み付けアンサンブル（Softmax正規化）
+  - 期待値(EV)計算（単勝/複勝/ワイド/馬連/3連複）
+  - 推奨ベット戦略生成（conservative/balanced/aggressive）
 
 ## 3. データフロー
 
@@ -83,21 +99,22 @@
 ```
 [外部データソース]
         │
-        ▼ (1) データ収集
-[Raw Data]
+        ▼ (1) データ収集 (src/data_collection/)
+[Raw Data] → data/raw/
         │
-        ▼ (2) 前処理・特徴量生成
-[Feature Matrix]
+        ▼ (2) 前処理・特徴量生成 (src/preprocessing/)
+[Feature Matrix] → data/processed/
         │
-        ▼ (3) 各エージェントで予測
-[9つの予測結果]
+        ▼ (3) 各エージェントで予測 (src/agents/)
+[9つの予測スコア]
         │
-        ▼ (4) アンサンブル
+        ▼ (4) オーケストレーター統合 (src/orchestrator/)
 [最終予測・期待値]
         │
-        ▼ (5) ベット戦略生成
-[推奨アクション]
+        ▼ (5) 買い目推奨 (betting_recommender.py)
+[推奨アクション] → results/
 ```
+
 
 ### 3.2 学習フロー
 
