@@ -14,28 +14,36 @@ class JockeyTrainerAgent(BaseAgent):
     責任: 騎手と調教師の能力、コンビネーション相性を評価
     
     評価観点:
-    - 騎手の全体勝率
-    - 調教師の全体勝率
-    - 騎手×馬の相性
+    - 騎手の全体勝率（現在は代替特徴量を使用）
+    - 調教師の全体勝率（現在は代替特徴量を使用）
+    - 騎手×馬の相性（現在は代替特徴量を使用）
+    
+    注意: 現在のデータセットには騎手・調教師の統計が不足しているため、
+    馬の成績ベースの代替特徴量を使用しています。
     """
     
     def __init__(self, version: str = "v1"):
         super().__init__(name="jockey_trainer_agent", version=version)
     
     def _get_feature_list(self) -> List[str]:
-        """騎手・調教師分析に使用する特徴量"""
+        """騎手・調教師分析に使用する特徴量（代替版）"""
+        # 騎手・調教師の直接的な統計がないため、
+        # 馬の成績から間接的に評価する特徴量を使用
         return [
-            # 騎手成績
-            'jockey_win_rate_overall',
-            'jockey_wins',
-            'jockey_race_count',
+            # 馬の成績（騎手の影響を反映）
+            'career_win_rate',
+            'career_place_rate',
+            'career_show_rate',
+            'career_total_races',
+            'career_total_wins',
             
-            # 調教師成績
-            'trainer_win_rate_overall',
-            'trainer_wins',
-            'trainer_race_count',
+            # 最近の調子（調教師の仕上げを反映）
+            'recent_form_score',
+            'recent_3_win_count',
+            'consistency_score',
             
-            # 騎手×馬コンビ
-            'jockey_horse_combination_count',
-            'jockey_horse_combination_wins'
+            # レース経験
+            'track_win_rate',
+            'track_experience_count'
         ]
+
