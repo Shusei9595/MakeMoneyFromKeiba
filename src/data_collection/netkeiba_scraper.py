@@ -186,9 +186,9 @@ class RaceResultScraper(BaseScraper):
                         break
             
             # レース日付
-            race_data2 = soup.find('div', class_='RaceData02')
-            if race_data2:
-                date_text = race_data2.get_text()
+            smalltxt = soup.find('p', class_='smalltxt')
+            if smalltxt:
+                date_text = smalltxt.get_text()
                 date_match = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', date_text)
                 if date_match:
                     year, month, day = date_match.groups()
@@ -199,6 +199,18 @@ class RaceResultScraper(BaseScraper):
                 if track_match:
                     race_data['track_name'] = track_match.group(2).strip()
                     race_data['race_number'] = int(re.search(r'(\d+)R', date_text).group(1) if re.search(r'(\d+)R', date_text) else 0)
+                
+                # レース番号に関しては、smalltxtに含まれていない場合があるので、別途取得を試みる
+                if race_data.get('race_number', 0) == 0:
+                     # 1R などが dt タグに入っていることがある
+                     racedata_dl = soup.find('dl', class_='racedata')
+                     if racedata_dl:
+                         dt = racedata_dl.find('dt')
+                         if dt:
+                             dt_text = dt.get_text(strip=True)
+                             r_match = re.search(r'(\d+)', dt_text)
+                             if r_match:
+                                 race_data['race_number'] = int(r_match.group(1))
             
             # グレード
             race_data['grade'] = self._extract_grade(soup)
@@ -228,7 +240,7 @@ class RaceResultScraper(BaseScraper):
         """レース結果テーブルをパース"""
         results = []
         
-        result_table = soup.find('table', class_='RaceTable01')
+        result_table = soup.find('table', class_='race_table_01')
         if not result_table:
             self.logger.warning(f"Result table not found for race {race_id}")
             return results
@@ -858,7 +870,7 @@ class OddsDataScraper(BaseScraper):
         odds_list = []
         
         # レース結果テーブルからオッズを抽出
-        result_table = soup.find('table', class_='RaceTable01')
+        result_table = soup.find('table', class_='race_table_01')
         if result_table:
             rows = result_table.find_all('tr')[1:]
             
