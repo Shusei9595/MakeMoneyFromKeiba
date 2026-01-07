@@ -58,31 +58,40 @@ cp config/config.example.yaml config/config.yaml
 ### データ収集
 
 ```bash
-keiba-ai collect --date 2024-01-01
+python src/data_collection/run_collection.py --start-date 2024-01-01 --end-date 2024-01-31
 ```
 
 ### データ前処理
 
 ```bash
-keiba-ai preprocess
+python src/preprocessing/run_preprocessing.py --input-dir data/raw --output-dir data/processed
 ```
 
-### モデル訓練
+### エージェント訓練
 
 ```bash
-keiba-ai train
+# 訓練データ準備
+python src/training/prepare_training_data.py --input-file data/processed/processed_races.csv
+
+# 9エージェント訓練
+python src/training/train_agents.py --data data/processed/training_data.csv --output models/
 ```
 
 ### 予測実行
 
 ```bash
-keiba-ai predict <race_id>
+python src/orchestrator/run_prediction.py \
+    --data data/processed/test_data.csv \
+    --strategy balanced \
+    --budget 10000
+
+# 戦略オプション: conservative / balanced / aggressive
 ```
 
-### バックテスト
+### テスト実行
 
 ```bash
-keiba-ai backtest --start-date 2024-01-01 --end-date 2024-12-31
+pytest tests/ -v
 ```
 
 ## 開発
