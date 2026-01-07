@@ -1,0 +1,64 @@
+# MakeMoneyFromKeiba 設定ファイル
+# プロジェクト全体の設定を管理
+
+# データ収集設定
+scraping:
+  base_url: "https://db.netkeiba.com"
+  request_interval: 1.0  # リクエスト間隔（秒）
+  max_retries: 3
+  timeout: 30
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+
+# 前処理設定
+preprocessing:
+  # 欠損値処理戦略
+  missing_value_strategy: "median"  # median, mean, forward_fill, drop
+  
+  # 外れ値処理
+  outlier_threshold: 3.0  # 標準偏差の倍数
+  
+  # 正規化手法
+  normalization: "standard"  # standard, minmax, robust
+  
+  # 特徴量選択
+  feature_selection:
+    enabled: false
+    method: "mutual_info"  # mutual_info, chi2, f_classif
+    n_features: 50
+  
+  # 時系列分割
+  time_series_split:
+    n_splits: 5
+    test_size: 0.2
+
+# モデル設定
+model:
+  # 学習パラメータ
+  random_state: 42
+  test_size: 0.2
+  
+  # モデルタイプ
+  type: "lightgbm"  # lightgbm, xgboost, random_forest
+  
+  # LightGBMパラメータ
+  lightgbm:
+    n_estimators: 1000
+    learning_rate: 0.05
+    max_depth: 8
+    num_leaves: 31
+    min_child_samples: 20
+    reg_alpha: 0.1
+    reg_lambda: 0.1
+
+# パス設定
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  features: "data/features"
+  models: "models"
+  logs: "logs"
+
+# ロギング設定
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
