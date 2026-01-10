@@ -234,14 +234,52 @@ class Prediction:
 - 1日分データ収集: < 30分
 - モデル学習 (1年分): < 2時間
 
-## 8. 今後の拡張計画
+## 8. Phase 6: 運用・デプロイメント
+
+### 8.1 CLIツール
+
+`keiba-ai` コマンドで全機能を実行可能:
+
+```bash
+keiba-ai collect     # データ収集
+keiba-ai preprocess  # 前処理
+keiba-ai train       # 訓練
+keiba-ai predict     # 予測
+keiba-ai backtest    # バックテスト
+keiba-ai report      # レポート生成
+keiba-ai config      # 設定管理
+```
+
+### 8.2 Docker
+
+環境非依存の実行環境を提供:
+
+```bash
+docker-compose run keiba-ai keiba-ai predict --date 2025-01-12 --strategy balanced --budget 10000
+```
+
+### 8.3 Web UI
+
+Streamlitによるブラウザインターフェース:
+
+```bash
+streamlit run src/web/app.py
+```
+
+### 8.4 監視・運用
+
+- **メトリクス収集**: `src/monitoring/metrics.py`
+- **アラート送信**: `src/monitoring/alerts.py`
+- **定期実行**: `src/monitoring/scheduler.py`
+
+## 9. 今後の拡張計画
 
 1. **リアルタイム予測**: ライブオッズ連携
 2. **深層学習エージェント**: Transformer系モデルの導入
 3. **自動ベッティング**: API連携による自動投票
-4. **ダッシュボード**: Web UIの提供
+4. **クラウドデプロイ**: AWS/GCP対応
 
 ---
 
-*最終更新: 2026-01-07*
+*最終更新: 2026-01-10*
 *バージョン: 1.0*

@@ -8,98 +8,123 @@
 - 📊 データ収集から予測まで全自動化
 - 💰 期待値(EV)ベースの投資戦略
 - 📈 バックテストによる性能検証
-- 🔧 使いやすいCLIツール
+- 🔧 使いやすいCLIツール `keiba-ai`
+- 🌐 ブラウザベースのWeb UI (Streamlit)
+- 🐳 Docker対応
+
+## クイックスタート
+
+### インストール
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/Shusei9595/MakeMoneyFromKeiba.git
+cd MakeMoneyFromKeiba
+
+# 仮想環境を作成
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# パッケージをインストール
+pip install -e ".[dev]"
+```
+
+### 基本的な使い方
+
+```bash
+# ヘルプ表示
+keiba-ai --help
+
+# データ収集
+keiba-ai collect --start-date 2024-01-01 --end-date 2024-12-31
+
+# データ前処理
+keiba-ai preprocess --input data/raw/ --output data/processed/
+
+# モデル訓練
+keiba-ai train --data data/processed/training_data.csv
+
+# 予測実行
+keiba-ai predict --date 2025-01-12 --strategy balanced --budget 10000
+
+# バックテスト
+keiba-ai backtest --start-date 2024-01-01 --end-date 2024-12-31
+```
+
+### Web UI
+
+```bash
+streamlit run src/web/app.py
+# ブラウザで http://localhost:8501 にアクセス
+```
+
+### Docker
+
+```bash
+cd docker
+docker-compose build
+docker-compose run keiba-ai keiba-ai --help
+```
 
 ## システム構成
 
 ### 専門家AI（9つ）
 
-1. **前走パフォーマンスAI** (25%) - 直近成績の分析
-2. **距離・コース適性AI** (20%) - 距離とコースの相性
-3. **騎手・調教師AI** (15%) - 人的要因の分析
-4. **血統AI** (10%) - 血統からの適性判断
-5. **レース展開AI** (10%) - ペース予測
-6. **馬体・調教AI** (10%) - フィジカルコンディション
-7. **オッズ分析AI** (5%) - 市場分析
-8. **統計パターンAI** (3%) - 歴史的パターン
-9. **異常値検出AI** (2%) - リスク検出
+| エージェント | 重み | 責務 |
+|-------------|------|------|
+| 前走パフォーマンスAI | 20% | 直近成績の分析 |
+| 距離・コース適性AI | 15% | 距離とコースの相性 |
+| 騎手・調教師AI | 15% | 人的要因の分析 |
+| 血統AI | 10% | 血統からの適性判断 |
+| レース展開AI | 12% | ペース予測 |
+| 馬体・調教AI | 8% | フィジカルコンディション |
+| 馬場・天候AI | 10% | 馬場状態の分析 |
+| 統計パターンAI | 5% | 歴史的パターン |
+| オッズ分析AI | 5% | 市場分析 |
 
-## セットアップ
+## プロジェクト構造
 
-### 1. リポジトリのクローン
-
-```bash
-git clone https://github.com/yourusername/keiba-ai-prediction-system.git
-cd keiba-ai-prediction-system
+```
+MakeMoneyFromKeiba/
+├── src/
+│   ├── agents/           # 9つの専門家AI
+│   ├── cli/              # CLIツール
+│   ├── data_collection/  # データ収集
+│   ├── evaluation/       # 評価・バックテスト
+│   ├── monitoring/       # 監視・運用
+│   ├── orchestrator/     # 予測統合
+│   ├── preprocessing/    # データ前処理
+│   ├── training/         # モデル訓練
+│   └── web/              # Web UI (Streamlit)
+├── config/               # 設定ファイル
+├── data/                 # データ（Git除外）
+├── docker/               # Docker設定
+├── docs/                 # ドキュメント
+├── models/               # 訓練済みモデル（Git除外）
+├── reports/              # レポート出力
+├── results/              # 予測結果
+└── tests/                # テスト
 ```
 
-### 2. 仮想環境の作成
+## ドキュメント
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-```
+- [クイックスタート](docs/user_guide/quickstart.md)
+- [CLIリファレンス](docs/user_guide/cli_reference.md)
+- [トラブルシューティング](docs/user_guide/troubleshooting.md)
+- [設計書](docs/DESIGN.md)
 
-### 3. 依存関係のインストール
+## パフォーマンス目標
 
-```bash
-pip install -e ".[dev]"
-```
-
-### 4. 設定ファイルの準備
-
-```bash
-cp config/config.example.yaml config/config.yaml
-# config.yaml を編集
-```
-
-## 使い方
-
-### データ収集
-
-```bash
-python src/data_collection/run_collection.py --start-date 2024-01-01 --end-date 2024-01-31
-```
-
-### データ前処理
-
-```bash
-python src/preprocessing/run_preprocessing.py --input-dir data/raw --output-dir data/processed
-```
-
-### エージェント訓練
-
-```bash
-# 訓練データ準備
-python src/training/prepare_training_data.py --input-file data/processed/processed_races.csv
-
-# 9エージェント訓練
-python src/training/train_agents.py --data data/processed/training_data.csv --output models/
-```
-
-### 予測実行
-
-```bash
-python src/orchestrator/run_prediction.py \
-    --data data/processed/test_data.csv \
-    --strategy balanced \
-    --budget 10000
-
-# 戦略オプション: conservative / balanced / aggressive
-```
-
-### テスト実行
-
-```bash
-pytest tests/ -v
-```
+- 🎯 回収率: 105-115%
+- 🎯 的中率: 40-50%
+- 🎯 NDCG@3: 0.65以上
 
 ## 開発
 
 ### テスト実行
 
 ```bash
-pytest
+pytest tests/ -v
 ```
 
 ### コードフォーマット
@@ -114,24 +139,6 @@ black src/ tests/
 mypy src/
 ```
 
-## プロジェクト構造
-
-```
-keiba-ai-prediction-system/
-├── src/              # ソースコード
-├── tests/            # テスト
-├── data/             # データ（Git除外）
-├── models/           # モデル（Git除外）
-├── config/           # 設定
-└── notebooks/        # 実験用（Git除外）
-```
-
-## パフォーマンス目標
-
-- 🎯 回収率: 105-115%
-- 🎯 的中率: 40-50%
-- 🎯 NDCG@3: 0.65以上
-
 ## ライセンス
 
 MIT License
@@ -139,3 +146,7 @@ MIT License
 ## 貢献
 
 貢献は歓迎します！詳細は [CONTRIBUTING.md](CONTRIBUTING.md) を参照。
+
+---
+
+*最終更新: 2026-01-10*

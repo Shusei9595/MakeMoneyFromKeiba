@@ -1,41 +1,66 @@
-# 貢献ガイドライン
+# 貢献ガイド
 
-このプロジェクトへの貢献を歓迎します！
+競馬AI予測システムへの貢献をお考えいただきありがとうございます！
 
-## 開発フロー
+## 開発環境のセットアップ
 
-1. このリポジトリをフォーク
-2. 機能ブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add amazing feature'`)
-4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
+```bash
+# リポジトリをフォーク後、クローン
+git clone https://github.com/YOUR_USERNAME/MakeMoneyFromKeiba.git
+cd MakeMoneyFromKeiba
+
+# 仮想環境を作成
+python -m venv venv
+source venv/bin/activate
+
+# 開発用依存関係をインストール
+pip install -e ".[dev]"
+```
 
 ## コーディング規約
 
-- PEP 8に従う
-- Black でフォーマット
-- 型ヒントを使用
-- Docstring を記述（Google Style）
+- **フォーマット**: Black（line-length: 100）
+- **型ヒント**: mypy でチェック
+- **ドキュメント**: Docstring必須（Google Style）
 
-## テスト
+## プルリクエストの手順
 
-- 新機能には必ずテストを追加
-- `pytest` で全テストが通ることを確認
-- カバレッジ 80% 以上を目標
+1. 新しいブランチを作成
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-## コミットメッセージ
+2. 変更をコミット
+   ```bash
+   git commit -m "feat: 機能の説明"
+   ```
 
-```
-<type>: <subject>
+3. テストを実行
+   ```bash
+   pytest tests/ -v
+   ```
 
-<body>
-```
+4. プッシュしてPRを作成
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
-Type:
-- feat: 新機能
-- fix: バグ修正
-- docs: ドキュメント
-- style: フォーマット
-- refactor: リファクタリング
-- test: テスト
-- chore: その他
+## コミットメッセージ規約
+
+| プレフィックス | 用途 |
+|---------------|------|
+| `feat:` | 新機能 |
+| `fix:` | バグ修正 |
+| `docs:` | ドキュメント |
+| `refactor:` | リファクタリング |
+| `test:` | テスト追加 |
+
+## Issue報告
+
+バグ報告や機能要望は GitHub Issue でお願いします。
+
+テンプレートに従って以下を記載してください：
+- 問題の詳細
+- 再現手順
+- 期待される動作
+- 環境情報

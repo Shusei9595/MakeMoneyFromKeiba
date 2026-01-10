@@ -62,7 +62,10 @@ class BaseScraper:
                 
                 if response.status_code == 200:
                     self.logger.info(f"Successfully fetched: {url}")
-                    return BeautifulSoup(response.content, 'html.parser')
+                    # Encoding fix for netkeiba
+                    if 'netkeiba.com' in url:
+                        response.encoding = 'EUC-JP'
+                    return BeautifulSoup(response.text, 'html.parser')
                 elif response.status_code == 404:
                     self.logger.warning(f"Page not found (404): {url}")
                     return None
@@ -95,6 +98,18 @@ class BaseScraper:
                 return None
         
         return None
+
+    def _extract_id(self, url: str) -> str:
+        """URLからIDを抽出 (horse, jockey, trainer共通)"""
+        if not url:
+            return ""
+        # 末尾のID部分を取得 (例: /horse/2021101234/ , /jockey/result/recent/05411/)
+        # スラッシュを排除して最後の要素を取得
+        parts = [p for p in url.split('/') if p]
+        if parts:
+            # 数字または英数字混じりのIDが想定される
+            return parts[-1]
+        return ""
     
     def _save_to_csv(self, data: List[Dict], filepath: Path):
         """データをCSVで保存"""
@@ -652,29 +667,33 @@ class HorseInfoScraper(BaseScraper):
                 
                 for row in rows:
                     cols = row.find_all('td')
-                    if len(cols) < 5:
+                    if len(cols) < 20: # 少なくともタイム指数くらいまではあるはず
                         continue
                     
                     result = {}
                     
-                    # 日付
-                    if cols[0]:
-                        result['race_date'] = cols[0].get_text(strip=True)
+                    # 日付 (index 0)
+                    result['race_date'] = cols[0].get_text(strip=True)
                     
-                    # 競馬場
-                    if cols[1]:
-                        result['track_name'] = cols[1].get_text(strip=True)
+                    # 競馬場 (index 1)
+                    result['track_name'] = cols[1].get_text(strip=True)
                     
-                    # レース名
-                    if len(cols) > 4:
-                        race_link = cols[4].find('a')
-                        if race_link:
-                            result['race_name'] = race_link.get_text(strip=True)
+                    # レース名 (index 4)
+                    race_link = cols[4].find('a')
+                    if race_link:
+                        result['race_name'] = race_link.get_text(strip=True)
                     
-                    # 着順
-                    if len(cols) > 11:
-                        finish = cols[11].get_text(strip=True)
-                        result['finish_position'] = int(finish) if finish.isdigit() else 0
+                    # 着順 (index 11)
+                    finish = cols[11].get_text(strip=True)
+                    result['finish_position'] = int(finish) if finish.isdigit() else 0
+                    
+                    # 距離 (index 14)
+                    dist_text = cols[14].get_text(strip=True)
+                    dist_match = re.search(r'(\d+)', dist_text)
+                    result['distance'] = int(dist_match.group(1)) if dist_match else 0
+                    
+                    # タイム (index 18)
+                    result['finish_time_str'] = cols[18].get_text(strip=True)
                     
                     results.append(result)
             
@@ -890,10 +909,219 @@ class OddsDataScraper(BaseScraper):
         
         return odds_list
     
-    def _parse_place_odds(self, soup: BeautifulSoup) -> List[Dict]:
-        """複勝オッズをパース"""
-        odds_list = []
-        
-        # 複勝オッズテーブル（実装はサイト構造に依存）
-        # 簡易実装
         return odds_list
+
+
+class LiveRaceScraper(BaseScraper):
+    """
+    最新レース（NAR）の情報を取得するスクレイパー
+    nar.netkeiba.com を使用
+    """
+    
+    def __init__(self, config: Dict):
+        super().__init__(config)
+        self.live_base_url = config.get('live_base_url', "https://nar.netkeiba.com")
+    
+    def scrape_race_list(self, date_str: str) -> List[str]:
+        """
+        指定日のレースID一覧を取得
+        date_str: YYYYMMDD
+        """
+        url = f"{self.live_base_url}/top/race_list.html?kaisai_date={date_str}"
+        soup = self._get_page(url)
+        if not soup:
+            return []
+        
+        race_ids = []
+        links = soup.find_all('a', href=re.compile(r'race_id=(\d{12})'))
+        for link in links:
+            match = re.search(r'race_id=(\d{12})', link.get('href', ''))
+            if match:
+                race_id = match.group(1)
+                if race_id not in race_ids:
+                    race_ids.append(race_id)
+        
+        return race_ids
+
+    def scrape_shutuba(self, race_id: str) -> pd.DataFrame:
+        """
+        出馬表を取得
+        """
+        url = f"{self.live_base_url}/race/shutuba.html?race_id={race_id}"
+        soup = self._get_page(url)
+        if not soup:
+            return pd.DataFrame()
+            
+        # 出馬表テーブル
+        # netkeibaのHTMLは壊れていることがあるため、テーブル内だけでなく全体から行を探す
+        rows = soup.find_all('tr', class_='HorseList')
+        self.logger.info(f"Found {len(rows)} HorseList rows (global scan)")
+        
+        if not rows:
+            table = soup.find('table', class_='Shutuba_Table')
+            if table:
+                rows = table.find_all('tr')[1:]
+                self.logger.info(f"Fallback: Found {len(rows)} tr rows in table")
+            else:
+                self.logger.warning(f"Could not find any horse data in {url}")
+                return pd.DataFrame()
+        
+        data = []
+        for row in rows:
+            cols = row.find_all('td')
+            # self.logger.info(f"Row has {len(cols)} columns")
+            if len(cols) < 10:
+                self.logger.warning(f"Skipping row with only {len(cols)} columns")
+                continue
+                
+            # horse_weightのパース (HTMLが壊れている場合があるため、最初の3桁数字を抽出)
+            weight_text = cols[8].get_text(strip=True)
+            weight_match = re.search(r'^(\d{3})', weight_text)
+            horse_weight = weight_match.group(1) if weight_match else weight_text[:3]
+            
+            # odds_winのパース (壊れたHTML対策: cols[9]またはcols[10]からオッズっぽいものを探す)
+            odds_text = cols[9].get_text(strip=True)
+            odds_match = re.search(r'(\d+\.\d+)', odds_text)
+            odds_win = odds_match.group(1) if odds_match else odds_text
+            
+            popularity_text = cols[10].get_text(strip=True)
+            pop_match = re.search(r'(\d+)', popularity_text)
+            popularity = pop_match.group(1) if pop_match else popularity_text
+
+            horse_info = {
+                'race_id': race_id,
+                'bracket_number': cols[0].get_text(strip=True),
+                'horse_number': cols[1].get_text(strip=True),
+                'horse_name': cols[3].find('span', class_='HorseName').get_text(strip=True) if cols[3].find('span', class_='HorseName') else cols[3].get_text(strip=True),
+                'horse_id': self._extract_id(cols[3].find('a')['href']) if cols[3].find('a') else '',
+                'gender_age': cols[4].get_text(strip=True) if len(cols) > 4 else '',
+                'weight_dist': cols[5].get_text(strip=True) if len(cols) > 5 else '',
+                'jockey_name': cols[6].get_text(strip=True) if len(cols) > 6 else '',
+                'jockey_id': self._extract_id(cols[6].find('a')['href']) if len(cols) > 6 and cols[6].find('a') else '',
+                'trainer_name': cols[7].get_text(strip=True) if len(cols) > 7 else '',
+                'trainer_id': self._extract_id(cols[7].find('a')['href']) if len(cols) > 7 and cols[7].find('a') else '',
+                'horse_weight': horse_weight,
+                'odds_win': odds_win,
+                'popularity': popularity
+            }
+            if horse_info['horse_id']:
+                data.append(horse_info)
+            
+        return pd.DataFrame(data)
+
+    def scrape_results(self, race_id: str) -> pd.DataFrame:
+        """
+        レース結果を取得
+        """
+        url = f"{self.live_base_url}/race/result.html?race_id={race_id}"
+        soup = self._get_page(url)
+        if not soup:
+            return pd.DataFrame()
+            
+        # 出走馬結果テーブル
+        # netkeibaのHTMLは 'RaceTable01' や 'ResultMain' などのクラスを持つ
+        table = soup.find('table', class_=re.compile(r'RaceTable01|ResultMain'))
+        if not table:
+            # Fallback
+            table = soup.find('table', id='All_Result_Table')
+            if not table:
+                self.logger.warning(f"Result table not found for race {race_id}")
+                return pd.DataFrame()
+            
+        data = []
+        rows = table.find_all('tr')[1:] # ヘッダーを飛ばす
+        for row in rows:
+            cols = row.find_all('td')
+            if len(cols) < 11:
+                continue
+                
+            result_info = {
+                'race_id': race_id,
+                'finish_position': cols[0].get_text(strip=True),
+                'horse_number': cols[2].get_text(strip=True),
+                'horse_id': self._extract_id(cols[3].find('a')['href']) if cols[3].find('a') else '',
+                'odds_win': cols[10].get_text(strip=True)
+            }
+            data.append(result_info)
+            
+        return pd.DataFrame(data)
+
+    def scrape_payouts(self, race_id: str) -> Dict:
+        """
+        払戻金情報を取得
+        """
+        url = f"{self.live_base_url}/race/result.html?race_id={race_id}"
+        soup = self._get_page(url)
+        if not soup:
+            return {}
+            
+        # 複数の払戻テーブルがある場合がある
+        tables = soup.find_all('table', class_='Payout_Detail_Table')
+        if not tables:
+            self.logger.warning(f"Payout tables not found for race {race_id}")
+            return {}
+            
+        payouts = {}
+        
+        # 券種マッピング
+        class_to_key = {
+            'Tansho': 'win',
+            'Fukusho': 'place',
+            'Wakuren': 'bracket_quinella',
+            'Umaren': 'quinella',
+            'Wide': 'wide',
+            'Umatan': 'exacta',
+            'Sanrenpuku': 'trio',
+            'Sanrentan': 'trifecta',
+            'Wakutan': 'bracket_exacta'
+        }
+        
+        for table in tables:
+            for cls, key in class_to_key.items():
+                row = table.find('tr', class_=cls)
+                if not row:
+                    continue
+                    
+                # 馬番・組み合わせ
+                res_td = row.find('td', class_='Result')
+                if not res_td:
+                    continue
+                    
+                combinations = []
+                # span要素を探す
+                spans = res_td.find_all('span')
+                # 複数の馬番がある場合（馬連など）は結合する
+                horses = [s.get_text(strip=True) for s in spans if s.get_text(strip=True)]
+                if horses:
+                    combinations.append('-'.join(horses))
+                
+                # 配当
+                pay_td = row.find('td', class_='Payout')
+                if not pay_td:
+                    continue
+                
+                amounts = []
+                # span内のテキストを取得（<br/>で区切られている場合がある）
+                pay_span = pay_td.find('span')
+                if not pay_span:
+                    continue
+                    
+                # 壊れたHTML対策: <br>を別の文字に置換してから分割。カンマは金額内の桁区切りに使用されるため
+                raw_text = str(pay_span).replace('<br/>', '\n').replace('<br>', '\n')
+                pay_soup = BeautifulSoup(raw_text, 'html.parser')
+                for p in pay_soup.get_text().split('\n'):
+                    p_clean = p.strip().replace('円', '').replace(',', '')
+                    if p_clean.isdigit():
+                        amounts.append(int(p_clean))
+                
+                # 既にある場合はマージ（複数行に分かれている場合への対応だが、基本はclsで分かれる）
+                if key in payouts:
+                    payouts[key]['combinations'].extend(combinations)
+                    payouts[key]['payouts'].extend(amounts)
+                else:
+                    payouts[key] = {
+                        'combinations': combinations,
+                        'payouts': amounts
+                    }
+            
+        return payouts

@@ -1,0 +1,5835 @@
+{
+  "202642010801": {
+    "finish_positions": [
+      {
+        "race_id": "202642010801",
+        "finish_position": "1",
+        "horse_number": "12",
+        "horse_id": "2022103521",
+        "odds_win": "1.1"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "2",
+        "horse_number": "1",
+        "horse_id": "2022106795",
+        "odds_win": "22.7"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "3",
+        "horse_number": "9",
+        "horse_id": "2022105361",
+        "odds_win": "9.7"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "2022107168",
+        "odds_win": "7.5"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "5",
+        "horse_number": "11",
+        "horse_id": "2022100948",
+        "odds_win": "54.8"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2022102281",
+        "odds_win": "69.1"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "2022106363",
+        "odds_win": "101.4"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2022103667",
+        "odds_win": "71.0"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "9",
+        "horse_number": "2",
+        "horse_id": "2022101537",
+        "odds_win": "127.2"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "10",
+        "horse_number": "10",
+        "horse_id": "2022106003",
+        "odds_win": "145.4"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "11",
+        "horse_number": "7",
+        "horse_id": "2022106595",
+        "odds_win": "73.3"
+      },
+      {
+        "race_id": "202642010801",
+        "finish_position": "12",
+        "horse_number": "8",
+        "horse_id": "2022101998",
+        "odds_win": "167.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "12"
+        ],
+        "payouts": [
+          110
+        ]
+      },
+      "place": {
+        "combinations": [
+          "12-1-9"
+        ],
+        "payouts": [
+          100,
+          200,
+          110
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-8"
+        ],
+        "payouts": [
+          400
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-12"
+        ],
+        "payouts": [
+          530
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-12-9-12-1-9"
+        ],
+        "payouts": [
+          250,
+          170,
+          610
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "12-1"
+        ],
+        "payouts": [
+          500
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "8-1"
+        ],
+        "payouts": [
+          490
+        ]
+      }
+    }
+  },
+  "202642010802": {
+    "finish_positions": [
+      {
+        "race_id": "202642010802",
+        "finish_position": "1",
+        "horse_number": "2",
+        "horse_id": "2022101737",
+        "odds_win": "1.7"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "2",
+        "horse_number": "11",
+        "horse_id": "2020104696",
+        "odds_win": "12.6"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "3",
+        "horse_number": "7",
+        "horse_id": "2021100882",
+        "odds_win": "7.1"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "4",
+        "horse_number": "5",
+        "horse_id": "2021101923",
+        "odds_win": "18.6"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "5",
+        "horse_number": "1",
+        "horse_id": "2021106373",
+        "odds_win": "122.5"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "6",
+        "horse_number": "12",
+        "horse_id": "2022102504",
+        "odds_win": "3.2"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "2018100249",
+        "odds_win": "69.5"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "8",
+        "horse_number": "9",
+        "horse_id": "2018100161",
+        "odds_win": "20.9"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "9",
+        "horse_number": "8",
+        "horse_id": "2019103483",
+        "odds_win": "94.1"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "10",
+        "horse_number": "6",
+        "horse_id": "2022105913",
+        "odds_win": "52.2"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "11",
+        "horse_number": "10",
+        "horse_id": "2017102454",
+        "odds_win": "301.4"
+      },
+      {
+        "race_id": "202642010802",
+        "finish_position": "12",
+        "horse_number": "3",
+        "horse_id": "2019100826",
+        "odds_win": "177.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "2"
+        ],
+        "payouts": [
+          170
+        ]
+      },
+      "place": {
+        "combinations": [
+          "2-11-7"
+        ],
+        "payouts": [
+          110,
+          200,
+          150
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          240
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-11"
+        ],
+        "payouts": [
+          960
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-11-2-7-7-11"
+        ],
+        "payouts": [
+          460,
+          230,
+          1020
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "2-11"
+        ],
+        "payouts": [
+          1220
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          410
+        ]
+      }
+    }
+  },
+  "202642010803": {
+    "finish_positions": [
+      {
+        "race_id": "202642010803",
+        "finish_position": "1",
+        "horse_number": "6",
+        "horse_id": "2021107207",
+        "odds_win": "3.5"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "2",
+        "horse_number": "1",
+        "horse_id": "2022103669",
+        "odds_win": "4.0"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "3",
+        "horse_number": "10",
+        "horse_id": "2021105342",
+        "odds_win": "7.3"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "4",
+        "horse_number": "9",
+        "horse_id": "2021103016",
+        "odds_win": "5.1"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "2020100471",
+        "odds_win": "165.1"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2022109076",
+        "odds_win": "3.3"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "7",
+        "horse_number": "12",
+        "horse_id": "2022104524",
+        "odds_win": "131.1"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "8",
+        "horse_number": "5",
+        "horse_id": "2022103562",
+        "odds_win": "174.4"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "2021103769",
+        "odds_win": "27.4"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "10",
+        "horse_number": "8",
+        "horse_id": "2022100119",
+        "odds_win": "122.9"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "11",
+        "horse_number": "11",
+        "horse_id": "2022103659",
+        "odds_win": "56.3"
+      },
+      {
+        "race_id": "202642010803",
+        "finish_position": "12",
+        "horse_number": "7",
+        "horse_id": "2021107091",
+        "odds_win": "112.3"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "6"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "place": {
+        "combinations": [
+          "6-1-10"
+        ],
+        "payouts": [
+          130,
+          110,
+          230
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          690
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-6"
+        ],
+        "payouts": [
+          670
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-6-6-10-1-10"
+        ],
+        "payouts": [
+          240,
+          520,
+          620
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "6-1"
+        ],
+        "payouts": [
+          910
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "5-1"
+        ],
+        "payouts": [
+          1100
+        ]
+      }
+    }
+  },
+  "202642010804": {
+    "finish_positions": [
+      {
+        "race_id": "202642010804",
+        "finish_position": "1",
+        "horse_number": "4",
+        "horse_id": "2023100182",
+        "odds_win": "14.7"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "2",
+        "horse_number": "5",
+        "horse_id": "2023103229",
+        "odds_win": "15.3"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "3",
+        "horse_number": "3",
+        "horse_id": "2023104655",
+        "odds_win": "35.8"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "4",
+        "horse_number": "11",
+        "horse_id": "2023100243",
+        "odds_win": "4.9"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "5",
+        "horse_number": "10",
+        "horse_id": "2023101258",
+        "odds_win": "128.6"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "6",
+        "horse_number": "8",
+        "horse_id": "2023102366",
+        "odds_win": "201.4"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "2023105101",
+        "odds_win": "20.0"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "8",
+        "horse_number": "1",
+        "horse_id": "2023100422",
+        "odds_win": "97.6"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "9",
+        "horse_number": "2",
+        "horse_id": "2023102262",
+        "odds_win": "2.7"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "10",
+        "horse_number": "12",
+        "horse_id": "2023106673",
+        "odds_win": "3.0"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "11",
+        "horse_number": "7",
+        "horse_id": "2023101442",
+        "odds_win": "125.0"
+      },
+      {
+        "race_id": "202642010804",
+        "finish_position": "12",
+        "horse_number": "6",
+        "horse_id": "2023101955",
+        "odds_win": "9.3"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "4"
+        ],
+        "payouts": [
+          1470
+        ]
+      },
+      "place": {
+        "combinations": [
+          "4-5-3"
+        ],
+        "payouts": [
+          350,
+          540,
+          690
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "4-5"
+        ],
+        "payouts": [
+          2490
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "4-5"
+        ],
+        "payouts": [
+          8160
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "4-5-3-4-3-5"
+        ],
+        "payouts": [
+          2040,
+          2630,
+          3730
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "4-5"
+        ],
+        "payouts": [
+          14870
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "4-5"
+        ],
+        "payouts": [
+          5150
+        ]
+      }
+    }
+  },
+  "202642010805": {
+    "finish_positions": [
+      {
+        "race_id": "202642010805",
+        "finish_position": "1",
+        "horse_number": "5",
+        "horse_id": "2022105662",
+        "odds_win": "18.6"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "2",
+        "horse_number": "10",
+        "horse_id": "2021102103",
+        "odds_win": "24.8"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "3",
+        "horse_number": "2",
+        "horse_id": "2022103980",
+        "odds_win": "13.8"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "2021103101",
+        "odds_win": "53.8"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "5",
+        "horse_number": "3",
+        "horse_id": "2022105627",
+        "odds_win": "14.8"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "6",
+        "horse_number": "6",
+        "horse_id": "2021103783",
+        "odds_win": "3.5"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "2020106178",
+        "odds_win": "26.0"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "8",
+        "horse_number": "11",
+        "horse_id": "2021102082",
+        "odds_win": "7.1"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "9",
+        "horse_number": "8",
+        "horse_id": "2022101848",
+        "odds_win": "20.0"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "10",
+        "horse_number": "9",
+        "horse_id": "2022101951",
+        "odds_win": "312.8"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "11",
+        "horse_number": "12",
+        "horse_id": "2021105091",
+        "odds_win": "2.1"
+      },
+      {
+        "race_id": "202642010805",
+        "finish_position": "12",
+        "horse_number": "7",
+        "horse_id": "2022102654",
+        "odds_win": "122.4"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "5"
+        ],
+        "payouts": [
+          1860
+        ]
+      },
+      "place": {
+        "combinations": [
+          "5-10-2"
+        ],
+        "payouts": [
+          470,
+          520,
+          370
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "5-7"
+        ],
+        "payouts": [
+          2380
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "5-10"
+        ],
+        "payouts": [
+          10470
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "5-10-2-5-2-10"
+        ],
+        "payouts": [
+          3420,
+          2210,
+          2130
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "5-10"
+        ],
+        "payouts": [
+          23710
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "5-7"
+        ],
+        "payouts": [
+          4240
+        ]
+      }
+    }
+  },
+  "202642010806": {
+    "finish_positions": [
+      {
+        "race_id": "202642010806",
+        "finish_position": "1",
+        "horse_number": "1",
+        "horse_id": "2021100714",
+        "odds_win": "5.0"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "2",
+        "horse_number": "7",
+        "horse_id": "2021103834",
+        "odds_win": "6.5"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "2021100544",
+        "odds_win": "52.0"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "4",
+        "horse_number": "9",
+        "horse_id": "2021102582",
+        "odds_win": "203.8"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "5",
+        "horse_number": "10",
+        "horse_id": "2021100837",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "6",
+        "horse_number": "8",
+        "horse_id": "2022106771",
+        "odds_win": "54.0"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2021100115",
+        "odds_win": "8.1"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "8",
+        "horse_number": "11",
+        "horse_id": "2022101341",
+        "odds_win": "45.9"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "9",
+        "horse_number": "5",
+        "horse_id": "2021100974",
+        "odds_win": "30.8"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "10",
+        "horse_number": "12",
+        "horse_id": "2020103227",
+        "odds_win": "143.3"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "11",
+        "horse_number": "2",
+        "horse_id": "2019104240",
+        "odds_win": "191.5"
+      },
+      {
+        "race_id": "202642010806",
+        "finish_position": "12",
+        "horse_number": "3",
+        "horse_id": "2022100095",
+        "odds_win": "2.8"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "1"
+        ],
+        "payouts": [
+          500
+        ]
+      },
+      "place": {
+        "combinations": [
+          "1-7-4"
+        ],
+        "payouts": [
+          170,
+          230,
+          880
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-6"
+        ],
+        "payouts": [
+          1440
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-7"
+        ],
+        "payouts": [
+          1460
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-7-1-4-4-7"
+        ],
+        "payouts": [
+          510,
+          1730,
+          4130
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "1-7"
+        ],
+        "payouts": [
+          2760
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "1-6"
+        ],
+        "payouts": [
+          2070
+        ]
+      }
+    }
+  },
+  "202642010807": {
+    "finish_positions": [
+      {
+        "race_id": "202642010807",
+        "finish_position": "1",
+        "horse_number": "4",
+        "horse_id": "2022100423",
+        "odds_win": "1.3"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "2",
+        "horse_number": "11",
+        "horse_id": "2022102244",
+        "odds_win": "12.1"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "3",
+        "horse_number": "8",
+        "horse_id": "2022110025",
+        "odds_win": "5.2"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "2022102358",
+        "odds_win": "47.4"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "5",
+        "horse_number": "3",
+        "horse_id": "2022101990",
+        "odds_win": "101.2"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "6",
+        "horse_number": "6",
+        "horse_id": "2022100475",
+        "odds_win": "45.7"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "7",
+        "horse_number": "7",
+        "horse_id": "2022106062",
+        "odds_win": "100.4"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "8",
+        "horse_number": "5",
+        "horse_id": "2022103488",
+        "odds_win": "90.8"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "9",
+        "horse_number": "2",
+        "horse_id": "2021106691",
+        "odds_win": "15.8"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "10",
+        "horse_number": "9",
+        "horse_id": "2022105880",
+        "odds_win": "26.5"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "11",
+        "horse_number": "10",
+        "horse_id": "2022100013",
+        "odds_win": "39.5"
+      },
+      {
+        "race_id": "202642010807",
+        "finish_position": "12",
+        "horse_number": "12",
+        "horse_id": "2022105295",
+        "odds_win": "106.5"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "4"
+        ],
+        "payouts": [
+          130
+        ]
+      },
+      "place": {
+        "combinations": [
+          "4-11-8"
+        ],
+        "payouts": [
+          100,
+          130,
+          160
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "4-8"
+        ],
+        "payouts": [
+          500
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "4-11"
+        ],
+        "payouts": [
+          510
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "4-11-4-8-8-11"
+        ],
+        "payouts": [
+          250,
+          150,
+          480
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "4-11"
+        ],
+        "payouts": [
+          630
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "4-8"
+        ],
+        "payouts": [
+          570
+        ]
+      }
+    }
+  },
+  "202642010808": {
+    "finish_positions": [
+      {
+        "race_id": "202642010808",
+        "finish_position": "1",
+        "horse_number": "12",
+        "horse_id": "2020102472",
+        "odds_win": "2.8"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "2",
+        "horse_number": "9",
+        "horse_id": "2022100445",
+        "odds_win": "3.7"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "2022103180",
+        "odds_win": "3.0"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "4",
+        "horse_number": "10",
+        "horse_id": "2022107164",
+        "odds_win": "9.8"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "5",
+        "horse_number": "6",
+        "horse_id": "2022105336",
+        "odds_win": "46.4"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "6",
+        "horse_number": "1",
+        "horse_id": "2022101013",
+        "odds_win": "46.2"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "7",
+        "horse_number": "7",
+        "horse_id": "2022100336",
+        "odds_win": "23.5"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "8",
+        "horse_number": "4",
+        "horse_id": "2022106135",
+        "odds_win": "148.6"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "9",
+        "horse_number": "11",
+        "horse_id": "2022104182",
+        "odds_win": "90.3"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "10",
+        "horse_number": "2",
+        "horse_id": "2022100733",
+        "odds_win": "12.3"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "11",
+        "horse_number": "8",
+        "horse_id": "2022109009",
+        "odds_win": "72.5"
+      },
+      {
+        "race_id": "202642010808",
+        "finish_position": "12",
+        "horse_number": "3",
+        "horse_id": "2022103710",
+        "odds_win": "155.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "12"
+        ],
+        "payouts": [
+          280
+        ]
+      },
+      "place": {
+        "combinations": [
+          "12-9-5"
+        ],
+        "payouts": [
+          110,
+          120,
+          110
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          510
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "9-12"
+        ],
+        "payouts": [
+          740
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "9-12-5-12-5-9"
+        ],
+        "payouts": [
+          270,
+          160,
+          190
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "12-9"
+        ],
+        "payouts": [
+          1040
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "8-7"
+        ],
+        "payouts": [
+          830
+        ]
+      }
+    }
+  },
+  "202642010809": {
+    "finish_positions": [
+      {
+        "race_id": "202642010809",
+        "finish_position": "1",
+        "horse_number": "6",
+        "horse_id": "2023100738",
+        "odds_win": "76.3"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "2",
+        "horse_number": "3",
+        "horse_id": "2023104656",
+        "odds_win": "5.1"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "2023101431",
+        "odds_win": "6.1"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "4",
+        "horse_number": "12",
+        "horse_id": "2023105469",
+        "odds_win": "3.6"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "5",
+        "horse_number": "1",
+        "horse_id": "2023101808",
+        "odds_win": "25.0"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "6",
+        "horse_number": "11",
+        "horse_id": "2023100677",
+        "odds_win": "24.4"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "7",
+        "horse_number": "8",
+        "horse_id": "2023104824",
+        "odds_win": "5.0"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "8",
+        "horse_number": "13",
+        "horse_id": "2023105147",
+        "odds_win": "19.5"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "9",
+        "horse_number": "7",
+        "horse_id": "2023104115",
+        "odds_win": "51.2"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "10",
+        "horse_number": "9",
+        "horse_id": "2023104037",
+        "odds_win": "21.5"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "11",
+        "horse_number": "2",
+        "horse_id": "2023106159",
+        "odds_win": "5.0"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "12",
+        "horse_number": "10",
+        "horse_id": "2023103028",
+        "odds_win": "215.2"
+      },
+      {
+        "race_id": "202642010809",
+        "finish_position": "13",
+        "horse_number": "4",
+        "horse_id": "2023102201",
+        "odds_win": "111.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "6"
+        ],
+        "payouts": [
+          7630
+        ]
+      },
+      "place": {
+        "combinations": [
+          "6-3-5"
+        ],
+        "payouts": [
+          1510,
+          240,
+          280
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-5"
+        ],
+        "payouts": [
+          4340
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-6"
+        ],
+        "payouts": [
+          13240
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-6-5-6-3-5"
+        ],
+        "payouts": [
+          3180,
+          4200,
+          460
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "6-3"
+        ],
+        "payouts": [
+          43310
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "5-3"
+        ],
+        "payouts": [
+          14400
+        ]
+      }
+    }
+  },
+  "202642010810": {
+    "finish_positions": [
+      {
+        "race_id": "202642010810",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "2020101630",
+        "odds_win": "3.5"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "2",
+        "horse_number": "2",
+        "horse_id": "2021100989",
+        "odds_win": "2.3"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "3",
+        "horse_number": "7",
+        "horse_id": "2021103120",
+        "odds_win": "9.5"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "2021100844",
+        "odds_win": "6.4"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "2020101927",
+        "odds_win": "5.0"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2021101330",
+        "odds_win": "45.9"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2021103314",
+        "odds_win": "22.8"
+      },
+      {
+        "race_id": "202642010810",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2017103509",
+        "odds_win": "97.8"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-2-7"
+        ],
+        "payouts": [
+          110,
+          100,
+          160
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          360
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-8-7-8-2-7"
+        ],
+        "payouts": [
+          170,
+          350,
+          250
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-2"
+        ],
+        "payouts": [
+          700
+        ]
+      }
+    }
+  },
+  "202642010811": {
+    "finish_positions": [
+      {
+        "race_id": "202642010811",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "2022101982",
+        "odds_win": "1.5"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "2",
+        "horse_number": "6",
+        "horse_id": "2022101592",
+        "odds_win": "10.9"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "3",
+        "horse_number": "2",
+        "horse_id": "2020103956",
+        "odds_win": "4.1"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "4",
+        "horse_number": "12",
+        "horse_id": "2020106937",
+        "odds_win": "41.3"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "5",
+        "horse_number": "8",
+        "horse_id": "2019106784",
+        "odds_win": "25.4"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "6",
+        "horse_number": "3",
+        "horse_id": "2021106917",
+        "odds_win": "65.0"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "7",
+        "horse_number": "11",
+        "horse_id": "2019100025",
+        "odds_win": "9.5"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "8",
+        "horse_number": "5",
+        "horse_id": "2022107052",
+        "odds_win": "15.3"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "9",
+        "horse_number": "4",
+        "horse_id": "2022107346",
+        "odds_win": "72.8"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "10",
+        "horse_number": "9",
+        "horse_id": "2019104988",
+        "odds_win": "180.9"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "11",
+        "horse_number": "10",
+        "horse_id": "2022102177",
+        "odds_win": "126.5"
+      },
+      {
+        "race_id": "202642010811",
+        "finish_position": "12",
+        "horse_number": "1",
+        "horse_id": "2020101838",
+        "odds_win": "67.3"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          150
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-6-2"
+        ],
+        "payouts": [
+          100,
+          190,
+          120
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "5-6"
+        ],
+        "payouts": [
+          380
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "6-7"
+        ],
+        "payouts": [
+          670
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "6-7-2-7-2-6"
+        ],
+        "payouts": [
+          270,
+          170,
+          480
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-6"
+        ],
+        "payouts": [
+          940
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "6-5"
+        ],
+        "payouts": [
+          570
+        ]
+      }
+    }
+  },
+  "202642010812": {
+    "finish_positions": [
+      {
+        "race_id": "202642010812",
+        "finish_position": "1",
+        "horse_number": "2",
+        "horse_id": "2020100711",
+        "odds_win": "1.7"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "2",
+        "horse_number": "6",
+        "horse_id": "2022100066",
+        "odds_win": "3.7"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2020101970",
+        "odds_win": "109.5"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "4",
+        "horse_number": "8",
+        "horse_id": "2020100198",
+        "odds_win": "6.8"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "5",
+        "horse_number": "10",
+        "horse_id": "2021106262",
+        "odds_win": "76.6"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "6",
+        "horse_number": "4",
+        "horse_id": "2019100886",
+        "odds_win": "36.6"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "7",
+        "horse_number": "3",
+        "horse_id": "2021107264",
+        "odds_win": "27.9"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "8",
+        "horse_number": "5",
+        "horse_id": "2022106972",
+        "odds_win": "27.7"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "9",
+        "horse_number": "9",
+        "horse_id": "2020106834",
+        "odds_win": "7.2"
+      },
+      {
+        "race_id": "202642010812",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "2022102544",
+        "odds_win": "55.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "2"
+        ],
+        "payouts": [
+          170
+        ]
+      },
+      "place": {
+        "combinations": [
+          "2-6-1"
+        ],
+        "payouts": [
+          120,
+          130,
+          1420
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          340
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-6-1-2-1-6"
+        ],
+        "payouts": [
+          200,
+          1670,
+          2570
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          630
+        ]
+      },
+      "bracket_exacta": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          500
+        ]
+      }
+    }
+  },
+  "202647010801": {
+    "finish_positions": [
+      {
+        "race_id": "202647010801",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "2020104053",
+        "odds_win": "48.8"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "2",
+        "horse_number": "2",
+        "horse_id": "2021104944",
+        "odds_win": "1.0"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2021106015",
+        "odds_win": "19.5"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2021101471",
+        "odds_win": "98.6"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "5",
+        "horse_number": "6",
+        "horse_id": "2020101461",
+        "odds_win": "13.8"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "6",
+        "horse_number": "7",
+        "horse_id": "2021102322",
+        "odds_win": "10.3"
+      },
+      {
+        "race_id": "202647010801",
+        "finish_position": "7",
+        "horse_number": "5",
+        "horse_id": "2021100806",
+        "odds_win": "17.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          4880
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-2"
+        ],
+        "payouts": [
+          590,
+          110
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-3"
+        ],
+        "payouts": [
+          1130
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-3-1-3-1-2"
+        ],
+        "payouts": [
+          380,
+          1480,
+          220
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-2"
+        ],
+        "payouts": [
+          6230
+        ]
+      }
+    }
+  },
+  "202647010802": {
+    "finish_positions": [
+      {
+        "race_id": "202647010802",
+        "finish_position": "1",
+        "horse_number": "2",
+        "horse_id": "2022100279",
+        "odds_win": "1.0"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "2",
+        "horse_number": "6",
+        "horse_id": "2021103882",
+        "odds_win": "9.8"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "3",
+        "horse_number": "3",
+        "horse_id": "2021101333",
+        "odds_win": "43.6"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "4",
+        "horse_number": "7",
+        "horse_id": "2021100538",
+        "odds_win": "9.9"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "5",
+        "horse_number": "1",
+        "horse_id": "2021102609",
+        "odds_win": "27.8"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "6",
+        "horse_number": "4",
+        "horse_id": "2021100848",
+        "odds_win": "40.1"
+      },
+      {
+        "race_id": "202647010802",
+        "finish_position": "7",
+        "horse_number": "5",
+        "horse_id": "2019100030",
+        "odds_win": "49.0"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "2"
+        ],
+        "payouts": [
+          100
+        ]
+      },
+      "place": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          100,
+          150
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          290
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-6-2-3-3-6"
+        ],
+        "payouts": [
+          220,
+          380,
+          600
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "2-6"
+        ],
+        "payouts": [
+          400
+        ]
+      }
+    }
+  },
+  "202647010803": {
+    "finish_positions": [
+      {
+        "race_id": "202647010803",
+        "finish_position": "1",
+        "horse_number": "1",
+        "horse_id": "2022106590",
+        "odds_win": "1.9"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "2",
+        "horse_number": "5",
+        "horse_id": "2022102120",
+        "odds_win": "6.3"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "3",
+        "horse_number": "6",
+        "horse_id": "2022106508",
+        "odds_win": "2.9"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2020106989",
+        "odds_win": "56.4"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "5",
+        "horse_number": "2",
+        "horse_id": "2020103998",
+        "odds_win": "92.7"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "6",
+        "horse_number": "7",
+        "horse_id": "2021103031",
+        "odds_win": "4.8"
+      },
+      {
+        "race_id": "202647010803",
+        "finish_position": "7",
+        "horse_number": "3",
+        "horse_id": "2020100211",
+        "odds_win": "65.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "1"
+        ],
+        "payouts": [
+          190
+        ]
+      },
+      "place": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          120,
+          200
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          520
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-5-1-6-5-6"
+        ],
+        "payouts": [
+          160,
+          130,
+          140
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          860
+        ]
+      }
+    }
+  },
+  "202647010804": {
+    "finish_positions": [
+      {
+        "race_id": "202647010804",
+        "finish_position": "1",
+        "horse_number": "1",
+        "horse_id": "2022106495",
+        "odds_win": "18.0"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "2",
+        "horse_number": "5",
+        "horse_id": "2020106403",
+        "odds_win": "2.8"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "3",
+        "horse_number": "3",
+        "horse_id": "2022103841",
+        "odds_win": "2.9"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2022100603",
+        "odds_win": "2.8"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "5",
+        "horse_number": "7",
+        "horse_id": "2020104944",
+        "odds_win": "28.2"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2020109009",
+        "odds_win": "151.0"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2022105288",
+        "odds_win": "40.0"
+      },
+      {
+        "race_id": "202647010804",
+        "finish_position": "8",
+        "horse_number": "8",
+        "horse_id": "2020100074",
+        "odds_win": "12.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "1"
+        ],
+        "payouts": [
+          1800
+        ]
+      },
+      "place": {
+        "combinations": [
+          "1-5-3"
+        ],
+        "payouts": [
+          160,
+          110,
+          110
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          2140
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-5-1-3-3-5"
+        ],
+        "payouts": [
+          470,
+          310,
+          160
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "1-5"
+        ],
+        "payouts": [
+          7210
+        ]
+      }
+    }
+  },
+  "202647010805": {
+    "finish_positions": [
+      {
+        "race_id": "202647010805",
+        "finish_position": "1",
+        "horse_number": "4",
+        "horse_id": "2019101121",
+        "odds_win": "2.0"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "2",
+        "horse_number": "1",
+        "horse_id": "2022105412",
+        "odds_win": "5.6"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "3",
+        "horse_number": "6",
+        "horse_id": "2021101160",
+        "odds_win": "3.4"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "4",
+        "horse_number": "7",
+        "horse_id": "2020106315",
+        "odds_win": "15.1"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2021103355",
+        "odds_win": "29.8"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "6",
+        "horse_number": "8",
+        "horse_id": "2015103623",
+        "odds_win": "79.7"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "7",
+        "horse_number": "2",
+        "horse_id": "2021106410",
+        "odds_win": "5.4"
+      },
+      {
+        "race_id": "202647010805",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2020101759",
+        "odds_win": "160.5"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "4"
+        ],
+        "payouts": [
+          200
+        ]
+      },
+      "place": {
+        "combinations": [
+          "4-1-6"
+        ],
+        "payouts": [
+          120,
+          170,
+          110
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-4"
+        ],
+        "payouts": [
+          710
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-4-4-6-1-6"
+        ],
+        "payouts": [
+          220,
+          190,
+          200
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "4-1"
+        ],
+        "payouts": [
+          1150
+        ]
+      }
+    }
+  },
+  "202647010806": {
+    "finish_positions": [
+      {
+        "race_id": "202647010806",
+        "finish_position": "1",
+        "horse_number": "4",
+        "horse_id": "2022103976",
+        "odds_win": "1.5"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "2",
+        "horse_number": "7",
+        "horse_id": "2017100447",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2019106426",
+        "odds_win": "21.6"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "2021104072",
+        "odds_win": "40.1"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2021102133",
+        "odds_win": "25.7"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2019103970",
+        "odds_win": "34.4"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "7",
+        "horse_number": "8",
+        "horse_id": "2021106785",
+        "odds_win": "7.9"
+      },
+      {
+        "race_id": "202647010806",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2022104384",
+        "odds_win": "29.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "4"
+        ],
+        "payouts": [
+          150
+        ]
+      },
+      "place": {
+        "combinations": [
+          "4-7-1"
+        ],
+        "payouts": [
+          100,
+          110,
+          180
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "4-7"
+        ],
+        "payouts": [
+          200
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "4-7-1-4-1-7"
+        ],
+        "payouts": [
+          140,
+          170,
+          640
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "4-7"
+        ],
+        "payouts": [
+          300
+        ]
+      }
+    }
+  },
+  "202647010807": {
+    "finish_positions": [
+      {
+        "race_id": "202647010807",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "2019102583",
+        "odds_win": "1.6"
+      },
+      {
+        "race_id": "202647010807",
+        "finish_position": "2",
+        "horse_number": "4",
+        "horse_id": "2021104282",
+        "odds_win": "6.6"
+      },
+      {
+        "race_id": "202647010807",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2019107042",
+        "odds_win": "33.5"
+      },
+      {
+        "race_id": "202647010807",
+        "finish_position": "4",
+        "horse_number": "2",
+        "horse_id": "2021102225",
+        "odds_win": "23.9"
+      },
+      {
+        "race_id": "202647010807",
+        "finish_position": "5",
+        "horse_number": "6",
+        "horse_id": "2021102445",
+        "odds_win": "2.4"
+      },
+      {
+        "race_id": "202647010807",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2018100146",
+        "odds_win": "47.3"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          160
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-4"
+        ],
+        "payouts": [
+          140,
+          210
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-4"
+        ],
+        "payouts": [
+          380
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-4-1-3-1-4"
+        ],
+        "payouts": [
+          260,
+          350,
+          720
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-4"
+        ],
+        "payouts": [
+          430
+        ]
+      }
+    }
+  },
+  "202647010808": {
+    "finish_positions": [
+      {
+        "race_id": "202647010808",
+        "finish_position": "1",
+        "horse_number": "6",
+        "horse_id": "2020104733",
+        "odds_win": "2.4"
+      },
+      {
+        "race_id": "202647010808",
+        "finish_position": "2",
+        "horse_number": "3",
+        "horse_id": "2017105689",
+        "odds_win": "4.0"
+      },
+      {
+        "race_id": "202647010808",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "2020101129",
+        "odds_win": "14.4"
+      },
+      {
+        "race_id": "202647010808",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "2021103454",
+        "odds_win": "2.0"
+      },
+      {
+        "race_id": "202647010808",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2018106715",
+        "odds_win": "37.2"
+      },
+      {
+        "race_id": "202647010808",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2018105667",
+        "odds_win": "95.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "6"
+        ],
+        "payouts": [
+          240
+        ]
+      },
+      "place": {
+        "combinations": [
+          "6-3"
+        ],
+        "payouts": [
+          100,
+          170
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-6"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-6-4-6-3-4"
+        ],
+        "payouts": [
+          170,
+          300,
+          260
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "6-3"
+        ],
+        "payouts": [
+          740
+        ]
+      }
+    }
+  },
+  "202647010809": {
+    "finish_positions": [
+      {
+        "race_id": "202647010809",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "2020105277",
+        "odds_win": "4.2"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "2",
+        "horse_number": "5",
+        "horse_id": "2021101118",
+        "odds_win": "2.3"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "3",
+        "horse_number": "6",
+        "horse_id": "2022101526",
+        "odds_win": "2.7"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2021104552",
+        "odds_win": "56.2"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "5",
+        "horse_number": "2",
+        "horse_id": "2021106570",
+        "odds_win": "21.3"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "6",
+        "horse_number": "1",
+        "horse_id": "2016110086",
+        "odds_win": "6.0"
+      },
+      {
+        "race_id": "202647010809",
+        "finish_position": "取消",
+        "horse_number": "3",
+        "horse_id": "2020105757",
+        "odds_win": ""
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          420
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-5"
+        ],
+        "payouts": [
+          200,
+          120
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "5-7"
+        ],
+        "payouts": [
+          500
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "5-7-6-7-5-6"
+        ],
+        "payouts": [
+          180,
+          150,
+          110
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-5"
+        ],
+        "payouts": [
+          1020
+        ]
+      }
+    }
+  },
+  "202647010810": {
+    "finish_positions": [
+      {
+        "race_id": "202647010810",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "2022101521",
+        "odds_win": "2.6"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "2",
+        "horse_number": "2",
+        "horse_id": "2020102391",
+        "odds_win": "40.2"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2021100444",
+        "odds_win": "4.2"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "4",
+        "horse_number": "9",
+        "horse_id": "2020105678",
+        "odds_win": "3.9"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2022100607",
+        "odds_win": "40.8"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "6",
+        "horse_number": "4",
+        "horse_id": "2021101514",
+        "odds_win": "60.9"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "7",
+        "horse_number": "3",
+        "horse_id": "2020102776",
+        "odds_win": "3.3"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "8",
+        "horse_number": "7",
+        "horse_id": "2020105702",
+        "odds_win": "73.5"
+      },
+      {
+        "race_id": "202647010810",
+        "finish_position": "9",
+        "horse_number": "6",
+        "horse_id": "2021101689",
+        "odds_win": "151.3"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          260
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-2-1"
+        ],
+        "payouts": [
+          120,
+          320,
+          140
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          2350
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          3120
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-8-1-8-1-2"
+        ],
+        "payouts": [
+          840,
+          230,
+          500
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-2"
+        ],
+        "payouts": [
+          4150
+        ]
+      }
+    }
+  },
+  "202650010801": {
+    "finish_positions": [
+      {
+        "race_id": "202650010801",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "2022104889",
+        "odds_win": "1.1"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "2",
+        "horse_number": "1",
+        "horse_id": "2022105888",
+        "odds_win": "54.4"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "2021105189",
+        "odds_win": "12.7"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "4",
+        "horse_number": "5",
+        "horse_id": "2018104442",
+        "odds_win": "14.6"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "5",
+        "horse_number": "8",
+        "horse_id": "2020103423",
+        "odds_win": "36.0"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "6",
+        "horse_number": "3",
+        "horse_id": "2022100761",
+        "odds_win": "113.5"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2018103567",
+        "odds_win": "7.3"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "8",
+        "horse_number": "10",
+        "horse_id": "2018109078",
+        "odds_win": "29.7"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "9",
+        "horse_number": "9",
+        "horse_id": "2019102818",
+        "odds_win": "137.8"
+      },
+      {
+        "race_id": "202650010801",
+        "finish_position": "10",
+        "horse_number": "2",
+        "horse_id": "2021105266",
+        "odds_win": "118.8"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          110
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-1-4"
+        ],
+        "payouts": [
+          130,
+          620,
+          240
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-7"
+        ],
+        "payouts": [
+          1490
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-7"
+        ],
+        "payouts": [
+          1410
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-7-4-7-1-4"
+        ],
+        "payouts": [
+          560,
+          230,
+          1390
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-1"
+        ],
+        "payouts": [
+          1720
+        ]
+      }
+    }
+  },
+  "202650010802": {
+    "finish_positions": [
+      {
+        "race_id": "202650010802",
+        "finish_position": "1",
+        "horse_number": "6",
+        "horse_id": "2021103651",
+        "odds_win": "1.2"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2020101839",
+        "odds_win": "24.7"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "3",
+        "horse_number": "9",
+        "horse_id": "2021105385",
+        "odds_win": "10.5"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "4",
+        "horse_number": "7",
+        "horse_id": "2020105455",
+        "odds_win": "77.5"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2020102967",
+        "odds_win": "6.4"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2022106797",
+        "odds_win": "22.7"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "7",
+        "horse_number": "1",
+        "horse_id": "2019106667",
+        "odds_win": "67.8"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "8",
+        "horse_number": "4",
+        "horse_id": "2021106423",
+        "odds_win": "88.3"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "9",
+        "horse_number": "10",
+        "horse_id": "2021104297",
+        "odds_win": "22.6"
+      },
+      {
+        "race_id": "202650010802",
+        "finish_position": "10",
+        "horse_number": "3",
+        "horse_id": "2017106324",
+        "odds_win": "183.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "6"
+        ],
+        "payouts": [
+          120
+        ]
+      },
+      "place": {
+        "combinations": [
+          "6-8-9"
+        ],
+        "payouts": [
+          100,
+          210,
+          170
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "6-7"
+        ],
+        "payouts": [
+          600
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "6-8"
+        ],
+        "payouts": [
+          590
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "6-8-6-9-8-9"
+        ],
+        "payouts": [
+          300,
+          160,
+          750
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "6-8"
+        ],
+        "payouts": [
+          730
+        ]
+      }
+    }
+  },
+  "202650010803": {
+    "finish_positions": [
+      {
+        "race_id": "202650010803",
+        "finish_position": "1",
+        "horse_number": "2",
+        "horse_id": "2023100388",
+        "odds_win": "4.0"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "2",
+        "horse_number": "11",
+        "horse_id": "2023100219",
+        "odds_win": "11.2"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "3",
+        "horse_number": "9",
+        "horse_id": "2023104178",
+        "odds_win": "2.6"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "4",
+        "horse_number": "8",
+        "horse_id": "2023104004",
+        "odds_win": "129.2"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "5",
+        "horse_number": "1",
+        "horse_id": "2023101511",
+        "odds_win": "5.4"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2023104213",
+        "odds_win": "4.4"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "2023100183",
+        "odds_win": "57.7"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "8",
+        "horse_number": "12",
+        "horse_id": "2023100506",
+        "odds_win": "45.4"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "2023104828",
+        "odds_win": "55.9"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "10",
+        "horse_number": "10",
+        "horse_id": "2023103063",
+        "odds_win": "19.4"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "11",
+        "horse_number": "6",
+        "horse_id": "2023105605",
+        "odds_win": "73.4"
+      },
+      {
+        "race_id": "202650010803",
+        "finish_position": "取消",
+        "horse_number": "7",
+        "horse_id": "2023105154",
+        "odds_win": ""
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "2"
+        ],
+        "payouts": [
+          400
+        ]
+      },
+      "place": {
+        "combinations": [
+          "2-11-9"
+        ],
+        "payouts": [
+          120,
+          200,
+          120
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          1560
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-11"
+        ],
+        "payouts": [
+          1940
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-11-2-9-9-11"
+        ],
+        "payouts": [
+          600,
+          220,
+          400
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "2-11"
+        ],
+        "payouts": [
+          3100
+        ]
+      }
+    }
+  },
+  "202650010804": {
+    "finish_positions": [
+      {
+        "race_id": "202650010804",
+        "finish_position": "1",
+        "horse_number": "1",
+        "horse_id": "2021103775",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "2",
+        "horse_number": "9",
+        "horse_id": "2015105435",
+        "odds_win": "12.7"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "2019104301",
+        "odds_win": "4.0"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "4",
+        "horse_number": "8",
+        "horse_id": "2022106383",
+        "odds_win": "4.3"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "2021106390",
+        "odds_win": "5.3"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2018106085",
+        "odds_win": "93.1"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2020104909",
+        "odds_win": "6.4"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "8",
+        "horse_number": "10",
+        "horse_id": "2016103982",
+        "odds_win": "259.6"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "2015101318",
+        "odds_win": "126.0"
+      },
+      {
+        "race_id": "202650010804",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "2019104566",
+        "odds_win": "193.9"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "1"
+        ],
+        "payouts": [
+          310
+        ]
+      },
+      "place": {
+        "combinations": [
+          "1-9-5"
+        ],
+        "payouts": [
+          130,
+          230,
+          180
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-8"
+        ],
+        "payouts": [
+          1460
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-9"
+        ],
+        "payouts": [
+          2490
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-9-1-5-5-9"
+        ],
+        "payouts": [
+          620,
+          330,
+          780
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "1-9"
+        ],
+        "payouts": [
+          3810
+        ]
+      }
+    }
+  },
+  "202650010805": {
+    "finish_positions": [
+      {
+        "race_id": "202650010805",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "2023101213",
+        "odds_win": "2.2"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2023100537",
+        "odds_win": "5.6"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "2023102192",
+        "odds_win": "50.3"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "4",
+        "horse_number": "12",
+        "horse_id": "2023102532",
+        "odds_win": "12.8"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "5",
+        "horse_number": "10",
+        "horse_id": "2023103023",
+        "odds_win": "7.4"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2023105589",
+        "odds_win": "3.4"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "2023106268",
+        "odds_win": "87.2"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2023103217",
+        "odds_win": "32.7"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "9",
+        "horse_number": "5",
+        "horse_id": "2023104026",
+        "odds_win": "34.9"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "10",
+        "horse_number": "1",
+        "horse_id": "2023105186",
+        "odds_win": "170.2"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "11",
+        "horse_number": "6",
+        "horse_id": "2023101010",
+        "odds_win": "148.3"
+      },
+      {
+        "race_id": "202650010805",
+        "finish_position": "12",
+        "horse_number": "11",
+        "horse_id": "2023102431",
+        "odds_win": "65.8"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          220
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-8-4"
+        ],
+        "payouts": [
+          120,
+          160,
+          1080
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "6-6"
+        ],
+        "payouts": [
+          630
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          590
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "7-8-4-7-4-8"
+        ],
+        "payouts": [
+          280,
+          1710,
+          3470
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          980
+        ]
+      }
+    }
+  },
+  "202650010806": {
+    "finish_positions": [
+      {
+        "race_id": "202650010806",
+        "finish_position": "1",
+        "horse_number": "2",
+        "horse_id": "2019106163",
+        "odds_win": "131.5"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2020100542",
+        "odds_win": "1.6"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "2020102113",
+        "odds_win": "11.7"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "2020100879",
+        "odds_win": "34.7"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "5",
+        "horse_number": "9",
+        "horse_id": "2021100401",
+        "odds_win": "22.3"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2022106621",
+        "odds_win": "195.3"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "7",
+        "horse_number": "3",
+        "horse_id": "2020105978",
+        "odds_win": "5.7"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "8",
+        "horse_number": "1",
+        "horse_id": "2022102443",
+        "odds_win": "58.0"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "9",
+        "horse_number": "10",
+        "horse_id": "2021106605",
+        "odds_win": "5.2"
+      },
+      {
+        "race_id": "202650010806",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "2022106958",
+        "odds_win": "12.4"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "2"
+        ],
+        "payouts": [
+          13150
+        ]
+      },
+      "place": {
+        "combinations": [
+          "2-8-4"
+        ],
+        "payouts": [
+          980,
+          110,
+          280
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-7"
+        ],
+        "payouts": [
+          3090
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          4440
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-8-2-4-4-8"
+        ],
+        "payouts": [
+          1190,
+          3970,
+          280
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "2-8"
+        ],
+        "payouts": [
+          25340
+        ]
+      }
+    }
+  },
+  "202650010807": {
+    "finish_positions": [
+      {
+        "race_id": "202650010807",
+        "finish_position": "1",
+        "horse_number": "10",
+        "horse_id": "2022101069",
+        "odds_win": "4.1"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2020102417",
+        "odds_win": "1.5"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "2021101867",
+        "odds_win": "4.8"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "4",
+        "horse_number": "7",
+        "horse_id": "2018101762",
+        "odds_win": "18.7"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2022106483",
+        "odds_win": "72.7"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "2021100648",
+        "odds_win": "36.5"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "2022105152",
+        "odds_win": "114.2"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2021102817",
+        "odds_win": "27.4"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "9",
+        "horse_number": "6",
+        "horse_id": "2017110145",
+        "odds_win": "66.0"
+      },
+      {
+        "race_id": "202650010807",
+        "finish_position": "10",
+        "horse_number": "4",
+        "horse_id": "2019110058",
+        "odds_win": "92.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "10"
+        ],
+        "payouts": [
+          410
+        ]
+      },
+      "place": {
+        "combinations": [
+          "10-8-1"
+        ],
+        "payouts": [
+          120,
+          100,
+          100
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          260
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "8-10"
+        ],
+        "payouts": [
+          260
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "8-10-1-10-1-8"
+        ],
+        "payouts": [
+          140,
+          230,
+          130
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "10-8"
+        ],
+        "payouts": [
+          750
+        ]
+      }
+    }
+  },
+  "202650010808": {
+    "finish_positions": [
+      {
+        "race_id": "202650010808",
+        "finish_position": "1",
+        "horse_number": "5",
+        "horse_id": "2022103210",
+        "odds_win": "1.7"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2018105101",
+        "odds_win": "32.2"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "3",
+        "horse_number": "9",
+        "horse_id": "2021105097",
+        "odds_win": "18.5"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2022103760",
+        "odds_win": "3.8"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "5",
+        "horse_number": "7",
+        "horse_id": "2018106754",
+        "odds_win": "10.3"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "6",
+        "horse_number": "10",
+        "horse_id": "2022100392",
+        "odds_win": "61.1"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "7",
+        "horse_number": "2",
+        "horse_id": "2017103632",
+        "odds_win": "41.4"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "2019102036",
+        "odds_win": "121.7"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "9",
+        "horse_number": "1",
+        "horse_id": "2022104932",
+        "odds_win": "108.1"
+      },
+      {
+        "race_id": "202650010808",
+        "finish_position": "10",
+        "horse_number": "6",
+        "horse_id": "2022101223",
+        "odds_win": "5.1"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "5"
+        ],
+        "payouts": [
+          170
+        ]
+      },
+      "place": {
+        "combinations": [
+          "5-8-9"
+        ],
+        "payouts": [
+          120,
+          320,
+          290
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "5-7"
+        ],
+        "payouts": [
+          640
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "5-8"
+        ],
+        "payouts": [
+          2120
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "5-8-5-9-8-9"
+        ],
+        "payouts": [
+          570,
+          400,
+          1990
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "5-8"
+        ],
+        "payouts": [
+          2280
+        ]
+      }
+    }
+  },
+  "202650010809": {
+    "finish_positions": [
+      {
+        "race_id": "202650010809",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "2019102528",
+        "odds_win": "3.0"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "2",
+        "horse_number": "9",
+        "horse_id": "2022106755",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "3",
+        "horse_number": "2",
+        "horse_id": "2021103867",
+        "odds_win": "8.7"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "2020101311",
+        "odds_win": "4.2"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "2022101347",
+        "odds_win": "5.1"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "6",
+        "horse_number": "1",
+        "horse_id": "2013102205",
+        "odds_win": "140.2"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "7",
+        "horse_number": "8",
+        "horse_id": "2018103638",
+        "odds_win": "58.1"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "8",
+        "horse_number": "6",
+        "horse_id": "2022105213",
+        "odds_win": "77.0"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "9",
+        "horse_number": "10",
+        "horse_id": "2021106253",
+        "odds_win": "33.1"
+      },
+      {
+        "race_id": "202650010809",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "2021103243",
+        "odds_win": "233.4"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          300
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-9-2"
+        ],
+        "payouts": [
+          110,
+          120,
+          200
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          590
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-9"
+        ],
+        "payouts": [
+          560
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-9-2-3-2-9"
+        ],
+        "payouts": [
+          210,
+          290,
+          400
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-9"
+        ],
+        "payouts": [
+          1200
+        ]
+      }
+    }
+  },
+  "202650010810": {
+    "finish_positions": [
+      {
+        "race_id": "202650010810",
+        "finish_position": "1",
+        "horse_number": "12",
+        "horse_id": "2022105294",
+        "odds_win": "1.1"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "2",
+        "horse_number": "9",
+        "horse_id": "2022100711",
+        "odds_win": "7.1"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "3",
+        "horse_number": "3",
+        "horse_id": "2022103445",
+        "odds_win": "10.0"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "4",
+        "horse_number": "2",
+        "horse_id": "2017106373",
+        "odds_win": "21.0"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "5",
+        "horse_number": "8",
+        "horse_id": "2019106014",
+        "odds_win": "23.8"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "6",
+        "horse_number": "10",
+        "horse_id": "2020105084",
+        "odds_win": "61.9"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "2020107076",
+        "odds_win": "124.7"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "8",
+        "horse_number": "5",
+        "horse_id": "2021106368",
+        "odds_win": "83.7"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "9",
+        "horse_number": "11",
+        "horse_id": "2022102645",
+        "odds_win": "81.0"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "10",
+        "horse_number": "6",
+        "horse_id": "2021103694",
+        "odds_win": "128.2"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "11",
+        "horse_number": "1",
+        "horse_id": "2022109030",
+        "odds_win": "95.7"
+      },
+      {
+        "race_id": "202650010810",
+        "finish_position": "12",
+        "horse_number": "7",
+        "horse_id": "2019100813",
+        "odds_win": "89.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "12"
+        ],
+        "payouts": [
+          110
+        ]
+      },
+      "place": {
+        "combinations": [
+          "12-9-3"
+        ],
+        "payouts": [
+          100,
+          120,
+          160
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          260
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "9-12"
+        ],
+        "payouts": [
+          270
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "9-12-3-12-3-9"
+        ],
+        "payouts": [
+          120,
+          130,
+          260
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "12-9"
+        ],
+        "payouts": [
+          310
+        ]
+      }
+    }
+  },
+  "202650010811": {
+    "finish_positions": [
+      {
+        "race_id": "202650010811",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "2021103476",
+        "odds_win": "1.4"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "2020101513",
+        "odds_win": "7.2"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "3",
+        "horse_number": "2",
+        "horse_id": "2021106294",
+        "odds_win": "8.8"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "2021101307",
+        "odds_win": "68.3"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "2021102066",
+        "odds_win": "4.1"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "2021102631",
+        "odds_win": "262.8"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "7",
+        "horse_number": "6",
+        "horse_id": "2018104322",
+        "odds_win": "62.3"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "8",
+        "horse_number": "10",
+        "horse_id": "2019106622",
+        "odds_win": "92.8"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "9",
+        "horse_number": "7",
+        "horse_id": "2021106662",
+        "odds_win": "244.3"
+      },
+      {
+        "race_id": "202650010811",
+        "finish_position": "10",
+        "horse_number": "9",
+        "horse_id": "2017104415",
+        "odds_win": "278.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          140
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-8-2"
+        ],
+        "payouts": [
+          100,
+          120,
+          150
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-7"
+        ],
+        "payouts": [
+          360
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          330
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-8-2-3-2-8"
+        ],
+        "payouts": [
+          170,
+          240,
+          400
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          420
+        ]
+      }
+    }
+  },
+  "202650010812": {
+    "finish_positions": [
+      {
+        "race_id": "202650010812",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "2020102387",
+        "odds_win": "5.6"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "2",
+        "horse_number": "3",
+        "horse_id": "2020100973",
+        "odds_win": "2.3"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "3",
+        "horse_number": "10",
+        "horse_id": "2018100515",
+        "odds_win": "38.0"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "4",
+        "horse_number": "5",
+        "horse_id": "2018103776",
+        "odds_win": "6.0"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "5",
+        "horse_number": "6",
+        "horse_id": "2019103090",
+        "odds_win": "73.2"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "6",
+        "horse_number": "1",
+        "horse_id": "2022107411",
+        "odds_win": "5.5"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "2020105235",
+        "odds_win": "11.8"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "8",
+        "horse_number": "8",
+        "horse_id": "2018102210",
+        "odds_win": "101.6"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "9",
+        "horse_number": "11",
+        "horse_id": "2018103247",
+        "odds_win": "20.5"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "10",
+        "horse_number": "2",
+        "horse_id": "2022102727",
+        "odds_win": "8.8"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "11",
+        "horse_number": "12",
+        "horse_id": "2022102955",
+        "odds_win": "133.0"
+      },
+      {
+        "race_id": "202650010812",
+        "finish_position": "12",
+        "horse_number": "4",
+        "horse_id": "2020101556",
+        "odds_win": "211.6"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          560
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-3-10"
+        ],
+        "payouts": [
+          160,
+          120,
+          700
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-6"
+        ],
+        "payouts": [
+          490
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-7"
+        ],
+        "payouts": [
+          500
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-7-7-10-3-10"
+        ],
+        "payouts": [
+          260,
+          2100,
+          1680
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-3"
+        ],
+        "payouts": [
+          1130
+        ]
+      }
+    }
+  },
+  "202665010801": {
+    "finish_positions": [
+      {
+        "race_id": "202665010801",
+        "finish_position": "1",
+        "horse_number": "9",
+        "horse_id": "B202200173",
+        "odds_win": "5.8"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "B202200090",
+        "odds_win": "11.1"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "B202200240",
+        "odds_win": "11.4"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "4",
+        "horse_number": "2",
+        "horse_id": "B202200041",
+        "odds_win": "2.5"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "5",
+        "horse_number": "5",
+        "horse_id": "B202200214",
+        "odds_win": "9.7"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "6",
+        "horse_number": "6",
+        "horse_id": "B202200312",
+        "odds_win": "62.9"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "B202200318",
+        "odds_win": "22.7"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "8",
+        "horse_number": "7",
+        "horse_id": "B202200114",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202665010801",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "B202100191",
+        "odds_win": "36.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "9"
+        ],
+        "payouts": [
+          580
+        ]
+      },
+      "place": {
+        "combinations": [
+          "9-8-1"
+        ],
+        "payouts": [
+          260,
+          160,
+          450
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "8-8"
+        ],
+        "payouts": [
+          2260
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "8-9"
+        ],
+        "payouts": [
+          1340
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "8-9-1-9-1-8"
+        ],
+        "payouts": [
+          480,
+          740,
+          1320
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "9-8"
+        ],
+        "payouts": [
+          1910
+        ]
+      }
+    }
+  },
+  "202665010802": {
+    "finish_positions": [
+      {
+        "race_id": "202665010802",
+        "finish_position": "1",
+        "horse_number": "6",
+        "horse_id": "B202300145",
+        "odds_win": "4.0"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "2",
+        "horse_number": "10",
+        "horse_id": "B202300288",
+        "odds_win": "7.7"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "B202300346",
+        "odds_win": "8.4"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "B202300025",
+        "odds_win": "33.8"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "5",
+        "horse_number": "1",
+        "horse_id": "B202300033",
+        "odds_win": "2.2"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "6",
+        "horse_number": "9",
+        "horse_id": "B202300379",
+        "odds_win": "19.1"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "7",
+        "horse_number": "8",
+        "horse_id": "B202300331",
+        "odds_win": "66.5"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "B202300074",
+        "odds_win": "35.8"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "9",
+        "horse_number": "2",
+        "horse_id": "B202300248",
+        "odds_win": "8.1"
+      },
+      {
+        "race_id": "202665010802",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "B202300229",
+        "odds_win": "16.4"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "6"
+        ],
+        "payouts": [
+          400
+        ]
+      },
+      "place": {
+        "combinations": [
+          "6-10-5"
+        ],
+        "payouts": [
+          170,
+          210,
+          180
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "6-8"
+        ],
+        "payouts": [
+          890
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "6-10"
+        ],
+        "payouts": [
+          1110
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "6-10-5-6-5-10"
+        ],
+        "payouts": [
+          480,
+          430,
+          630
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "6-10"
+        ],
+        "payouts": [
+          2270
+        ]
+      }
+    }
+  },
+  "202665010803": {
+    "finish_positions": [
+      {
+        "race_id": "202665010803",
+        "finish_position": "1",
+        "horse_number": "10",
+        "horse_id": "B202300150",
+        "odds_win": "3.5"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "2",
+        "horse_number": "3",
+        "horse_id": "B202300172",
+        "odds_win": "31.7"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "B202300019",
+        "odds_win": "6.3"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "4",
+        "horse_number": "8",
+        "horse_id": "B202300279",
+        "odds_win": "2.7"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "5",
+        "horse_number": "6",
+        "horse_id": "B202300296",
+        "odds_win": "15.8"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "6",
+        "horse_number": "4",
+        "horse_id": "B202300240",
+        "odds_win": "14.2"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "B202300281",
+        "odds_win": "9.5"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "8",
+        "horse_number": "2",
+        "horse_id": "B202300173",
+        "odds_win": "9.3"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "9",
+        "horse_number": "7",
+        "horse_id": "B202300244",
+        "odds_win": "21.9"
+      },
+      {
+        "race_id": "202665010803",
+        "finish_position": "10",
+        "horse_number": "1",
+        "horse_id": "B202300097",
+        "odds_win": "39.4"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "10"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "place": {
+        "combinations": [
+          "10-3-5"
+        ],
+        "payouts": [
+          250,
+          670,
+          250
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          3650
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-10"
+        ],
+        "payouts": [
+          6060
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-10-5-10-3-5"
+        ],
+        "payouts": [
+          1390,
+          570,
+          1520
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "10-3"
+        ],
+        "payouts": [
+          11980
+        ]
+      }
+    }
+  },
+  "202665010804": {
+    "finish_positions": [
+      {
+        "race_id": "202665010804",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "B202300138",
+        "odds_win": "17.0"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "2",
+        "horse_number": "7",
+        "horse_id": "B202300039",
+        "odds_win": "7.9"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "B202300213",
+        "odds_win": "90.3"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "B202300029",
+        "odds_win": "7.7"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "5",
+        "horse_number": "3",
+        "horse_id": "B202300180",
+        "odds_win": "6.5"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "6",
+        "horse_number": "4",
+        "horse_id": "B202300096",
+        "odds_win": "28.1"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "B202300327",
+        "odds_win": "2.1"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "8",
+        "horse_number": "10",
+        "horse_id": "B202300190",
+        "odds_win": "5.3"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "9",
+        "horse_number": "2",
+        "horse_id": "B202300079",
+        "odds_win": "75.5"
+      },
+      {
+        "race_id": "202665010804",
+        "finish_position": "10",
+        "horse_number": "5",
+        "horse_id": "B202300334",
+        "odds_win": "13.9"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          1700
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-7-1"
+        ],
+        "payouts": [
+          540,
+          340,
+          1250
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "7-7"
+        ],
+        "payouts": [
+          2800
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          4560
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "7-8-1-8-1-7"
+        ],
+        "payouts": [
+          1210,
+          6180,
+          2990
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-7"
+        ],
+        "payouts": [
+          10780
+        ]
+      }
+    }
+  },
+  "202665010805": {
+    "finish_positions": [
+      {
+        "race_id": "202665010805",
+        "finish_position": "1",
+        "horse_number": "4",
+        "horse_id": "B202300373",
+        "odds_win": "3.2"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "2",
+        "horse_number": "3",
+        "horse_id": "B202300307",
+        "odds_win": "10.8"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "3",
+        "horse_number": "10",
+        "horse_id": "B202300311",
+        "odds_win": "6.5"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "4",
+        "horse_number": "5",
+        "horse_id": "B202300176",
+        "odds_win": "12.0"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "5",
+        "horse_number": "8",
+        "horse_id": "B202300062",
+        "odds_win": "8.3"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "6",
+        "horse_number": "6",
+        "horse_id": "B202300199",
+        "odds_win": "10.2"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "7",
+        "horse_number": "9",
+        "horse_id": "B200500155",
+        "odds_win": "18.8"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "8",
+        "horse_number": "2",
+        "horse_id": "B202300285",
+        "odds_win": "19.4"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "9",
+        "horse_number": "1",
+        "horse_id": "B202300098",
+        "odds_win": "25.1"
+      },
+      {
+        "race_id": "202665010805",
+        "finish_position": "10",
+        "horse_number": "7",
+        "horse_id": "B202300161",
+        "odds_win": "4.0"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "4"
+        ],
+        "payouts": [
+          320
+        ]
+      },
+      "place": {
+        "combinations": [
+          "4-3-10"
+        ],
+        "payouts": [
+          110,
+          210,
+          250
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-4"
+        ],
+        "payouts": [
+          2110
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-4"
+        ],
+        "payouts": [
+          1630
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-4-4-10-3-10"
+        ],
+        "payouts": [
+          710,
+          390,
+          1610
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "4-3"
+        ],
+        "payouts": [
+          2630
+        ]
+      }
+    }
+  },
+  "202665010806": {
+    "finish_positions": [
+      {
+        "race_id": "202665010806",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "B202100022",
+        "odds_win": "3.4"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "2",
+        "horse_number": "8",
+        "horse_id": "B202100259",
+        "odds_win": "8.5"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "3",
+        "horse_number": "4",
+        "horse_id": "B202100238",
+        "odds_win": "88.5"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "B202100166",
+        "odds_win": "3.1"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "5",
+        "horse_number": "2",
+        "horse_id": "B202100331",
+        "odds_win": "25.8"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "B202100303",
+        "odds_win": "4.3"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "7",
+        "horse_number": "1",
+        "horse_id": "B202200253",
+        "odds_win": "25.0"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "8",
+        "horse_number": "7",
+        "horse_id": "B202100288",
+        "odds_win": "34.5"
+      },
+      {
+        "race_id": "202665010806",
+        "finish_position": "9",
+        "horse_number": "9",
+        "horse_id": "B202100363",
+        "odds_win": "5.5"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          340
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-8-4"
+        ],
+        "payouts": [
+          140,
+          230,
+          1040
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          570
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          1370
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "3-8-3-4-4-8"
+        ],
+        "payouts": [
+          510,
+          1300,
+          3220
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-8"
+        ],
+        "payouts": [
+          1960
+        ]
+      }
+    }
+  },
+  "202665010807": {
+    "finish_positions": [
+      {
+        "race_id": "202665010807",
+        "finish_position": "1",
+        "horse_number": "7",
+        "horse_id": "B202200182",
+        "odds_win": "2.9"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "2",
+        "horse_number": "6",
+        "horse_id": "B202200296",
+        "odds_win": "1.9"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "B202200259",
+        "odds_win": "9.7"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "4",
+        "horse_number": "2",
+        "horse_id": "B202200243",
+        "odds_win": "6.6"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "5",
+        "horse_number": "8",
+        "horse_id": "B202200269",
+        "odds_win": "32.5"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "6",
+        "horse_number": "1",
+        "horse_id": "B202200081",
+        "odds_win": "75.4"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "7",
+        "horse_number": "4",
+        "horse_id": "B202200042",
+        "odds_win": "49.8"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "8",
+        "horse_number": "9",
+        "horse_id": "B202200237",
+        "odds_win": "20.8"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "9",
+        "horse_number": "10",
+        "horse_id": "B202200023",
+        "odds_win": "79.3"
+      },
+      {
+        "race_id": "202665010807",
+        "finish_position": "10",
+        "horse_number": "3",
+        "horse_id": "B202200016",
+        "odds_win": "40.9"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "7"
+        ],
+        "payouts": [
+          290
+        ]
+      },
+      "place": {
+        "combinations": [
+          "7-6-5"
+        ],
+        "payouts": [
+          120,
+          140,
+          160
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "6-7"
+        ],
+        "payouts": [
+          470
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "6-7"
+        ],
+        "payouts": [
+          260
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "6-7-5-7-5-6"
+        ],
+        "payouts": [
+          170,
+          270,
+          400
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "7-6"
+        ],
+        "payouts": [
+          670
+        ]
+      }
+    }
+  },
+  "202665010808": {
+    "finish_positions": [
+      {
+        "race_id": "202665010808",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "B202300095",
+        "odds_win": "3.5"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "2",
+        "horse_number": "1",
+        "horse_id": "B202300066",
+        "odds_win": "9.1"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "3",
+        "horse_number": "5",
+        "horse_id": "B202300301",
+        "odds_win": "58.2"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "4",
+        "horse_number": "4",
+        "horse_id": "B202300220",
+        "odds_win": "2.3"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "5",
+        "horse_number": "7",
+        "horse_id": "B202300153",
+        "odds_win": "15.4"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "6",
+        "horse_number": "6",
+        "horse_id": "B202300344",
+        "odds_win": "26.2"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "7",
+        "horse_number": "2",
+        "horse_id": "B202300315",
+        "odds_win": "8.8"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "8",
+        "horse_number": "9",
+        "horse_id": "B202300072",
+        "odds_win": "50.4"
+      },
+      {
+        "race_id": "202665010808",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "B202300086",
+        "odds_win": "5.5"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          350
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-1-5"
+        ],
+        "payouts": [
+          120,
+          300,
+          720
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "1-8"
+        ],
+        "payouts": [
+          1430
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "1-8"
+        ],
+        "payouts": [
+          1010
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "1-8-5-8-1-5"
+        ],
+        "payouts": [
+          400,
+          1690,
+          3280
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-1"
+        ],
+        "payouts": [
+          1760
+        ]
+      }
+    }
+  },
+  "202665010809": {
+    "finish_positions": [
+      {
+        "race_id": "202665010809",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "B201900331",
+        "odds_win": "9.5"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "2",
+        "horse_number": "7",
+        "horse_id": "B201800265",
+        "odds_win": "1.9"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "3",
+        "horse_number": "9",
+        "horse_id": "B201600034",
+        "odds_win": "7.9"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "B201800247",
+        "odds_win": "22.0"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "B201900342",
+        "odds_win": "7.2"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "6",
+        "horse_number": "5",
+        "horse_id": "B201900068",
+        "odds_win": "7.1"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "7",
+        "horse_number": "2",
+        "horse_id": "B201900324",
+        "odds_win": "8.5"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "8",
+        "horse_number": "1",
+        "horse_id": "B202000093",
+        "odds_win": "94.5"
+      },
+      {
+        "race_id": "202665010809",
+        "finish_position": "9",
+        "horse_number": "3",
+        "horse_id": "B201800179",
+        "odds_win": "16.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          950
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-7-9"
+        ],
+        "payouts": [
+          230,
+          100,
+          220
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          330
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          770
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "7-8-8-9-7-9"
+        ],
+        "payouts": [
+          320,
+          840,
+          310
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-7"
+        ],
+        "payouts": [
+          2050
+        ]
+      }
+    }
+  },
+  "202665010810": {
+    "finish_positions": [
+      {
+        "race_id": "202665010810",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "B202000258",
+        "odds_win": "3.4"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "2",
+        "horse_number": "7",
+        "horse_id": "B201700244",
+        "odds_win": "13.0"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "3",
+        "horse_number": "1",
+        "horse_id": "B202000063",
+        "odds_win": "5.6"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "4",
+        "horse_number": "6",
+        "horse_id": "B201800315",
+        "odds_win": "2.1"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "5",
+        "horse_number": "4",
+        "horse_id": "B201700056",
+        "odds_win": "7.0"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "6",
+        "horse_number": "2",
+        "horse_id": "B202000257",
+        "odds_win": "22.2"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "7",
+        "horse_number": "5",
+        "horse_id": "B201700107",
+        "odds_win": "25.5"
+      },
+      {
+        "race_id": "202665010810",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "B201600173",
+        "odds_win": "81.7"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          340
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-7-1"
+        ],
+        "payouts": [
+          160,
+          280,
+          160
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "7-8"
+        ],
+        "payouts": [
+          1780
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "7-8-1-8-1-7"
+        ],
+        "payouts": [
+          630,
+          340,
+          870
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-7"
+        ],
+        "payouts": [
+          2990
+        ]
+      }
+    }
+  },
+  "202665010811": {
+    "finish_positions": [
+      {
+        "race_id": "202665010811",
+        "finish_position": "1",
+        "horse_number": "8",
+        "horse_id": "B201900110",
+        "odds_win": "1.3"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "2",
+        "horse_number": "6",
+        "horse_id": "B201800215",
+        "odds_win": "11.7"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "3",
+        "horse_number": "2",
+        "horse_id": "B201900338",
+        "odds_win": "24.4"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "4",
+        "horse_number": "5",
+        "horse_id": "B201900353",
+        "odds_win": "6.7"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "5",
+        "horse_number": "9",
+        "horse_id": "B201600065",
+        "odds_win": "26.5"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "6",
+        "horse_number": "7",
+        "horse_id": "B202000251",
+        "odds_win": "55.3"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "7",
+        "horse_number": "1",
+        "horse_id": "B202000188",
+        "odds_win": "6.9"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "8",
+        "horse_number": "3",
+        "horse_id": "B201900107",
+        "odds_win": "74.0"
+      },
+      {
+        "race_id": "202665010811",
+        "finish_position": "9",
+        "horse_number": "4",
+        "horse_id": "B201900328",
+        "odds_win": "36.5"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "8"
+        ],
+        "payouts": [
+          130
+        ]
+      },
+      "place": {
+        "combinations": [
+          "8-6-2"
+        ],
+        "payouts": [
+          100,
+          170,
+          280
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "6-8"
+        ],
+        "payouts": [
+          510
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "6-8"
+        ],
+        "payouts": [
+          400
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "6-8-2-8-2-6"
+        ],
+        "payouts": [
+          240,
+          470,
+          1410
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "8-6"
+        ],
+        "payouts": [
+          560
+        ]
+      }
+    }
+  },
+  "202665010812": {
+    "finish_positions": [
+      {
+        "race_id": "202665010812",
+        "finish_position": "1",
+        "horse_number": "3",
+        "horse_id": "B202200013",
+        "odds_win": "23.9"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "2",
+        "horse_number": "2",
+        "horse_id": "B202200103",
+        "odds_win": "2.4"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "3",
+        "horse_number": "8",
+        "horse_id": "B202100334",
+        "odds_win": "3.4"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "4",
+        "horse_number": "1",
+        "horse_id": "B202100081",
+        "odds_win": "11.4"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "5",
+        "horse_number": "10",
+        "horse_id": "B202200176",
+        "odds_win": "6.7"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "6",
+        "horse_number": "9",
+        "horse_id": "B202000040",
+        "odds_win": "29.6"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "7",
+        "horse_number": "5",
+        "horse_id": "B202100258",
+        "odds_win": "6.0"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "8",
+        "horse_number": "4",
+        "horse_id": "B202100378",
+        "odds_win": "62.4"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "9",
+        "horse_number": "7",
+        "horse_id": "B202100397",
+        "odds_win": "68.5"
+      },
+      {
+        "race_id": "202665010812",
+        "finish_position": "10",
+        "horse_number": "6",
+        "horse_id": "B202100070",
+        "odds_win": "21.2"
+      }
+    ],
+    "payouts": {
+      "win": {
+        "combinations": [
+          "3"
+        ],
+        "payouts": [
+          2390
+        ]
+      },
+      "place": {
+        "combinations": [
+          "3-2-8"
+        ],
+        "payouts": [
+          450,
+          130,
+          150
+        ]
+      },
+      "bracket_quinella": {
+        "combinations": [
+          "2-3"
+        ],
+        "payouts": [
+          2750
+        ]
+      },
+      "quinella": {
+        "combinations": [
+          "2-3"
+        ],
+        "payouts": [
+          2640
+        ]
+      },
+      "wide": {
+        "combinations": [
+          "2-3-3-8-2-8"
+        ],
+        "payouts": [
+          950,
+          1400,
+          210
+        ]
+      },
+      "exacta": {
+        "combinations": [
+          "3-2"
+        ],
+        "payouts": [
+          10180
+        ]
+      }
+    }
+  }
+}

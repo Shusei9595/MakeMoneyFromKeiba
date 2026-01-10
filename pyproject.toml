@@ -40,7 +40,7 @@ dev = [
 ]
 
 [project.scripts]
-keiba-ai = "src.cli:main"
+keiba-ai = "src.cli.main:main"
 
 [build-system]
 requires = ["setuptools>=68.0.0", "wheel"]

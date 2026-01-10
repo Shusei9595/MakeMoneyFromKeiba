@@ -1,0 +1,601 @@
+{
+  "predictions": [
+    {
+      "race_id": 202642010711,
+      "horse_number": 1,
+      "horse_name": "コンヨバンコク",
+      "odds": 10.5,
+      "popularity": 6,
+      "bracket_number": 1,
+      "gender_age": "牡3",
+      "weight_dist": 57.0,
+      "jockey_name": "矢野貴之",
+      "trainer_name": "斉藤敏",
+      "horse_weight": 463,
+      "recent_3_avg_speed": 38.5,
+      "last_race_position": 2,
+      "recent_form_score": 7.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.006053041049999997,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 2,
+      "horse_name": "ヤギリアイビス",
+      "odds": 8.8,
+      "popularity": 4,
+      "bracket_number": 2,
+      "gender_age": "牡3",
+      "weight_dist": 56.0,
+      "jockey_name": "張田昂",
+      "trainer_name": "張田京",
+      "horse_weight": 498,
+      "recent_3_avg_speed": 39.0,
+      "last_race_position": 3,
+      "recent_form_score": 8.0,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.008647201499999995,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 3,
+      "horse_name": "ハンデンドレイク",
+      "odds": 2.2,
+      "popularity": 1,
+      "bracket_number": 3,
+      "gender_age": "牡3",
+      "weight_dist": 57.0,
+      "jockey_name": "本田正重",
+      "trainer_name": "荒山勝徳",
+      "horse_weight": 497,
+      "recent_3_avg_speed": 40.5,
+      "last_race_position": 1,
+      "recent_form_score": 9.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.012353144999999994,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 4,
+      "horse_name": "スマトラフレイバー",
+      "odds": 6.3,
+      "popularity": 3,
+      "bracket_number": 4,
+      "gender_age": "牡3",
+      "weight_dist": 58.0,
+      "jockey_name": "野畑凌",
+      "trainer_name": "稲益貴弘",
+      "horse_weight": 474,
+      "recent_3_avg_speed": 39.5,
+      "last_race_position": 2,
+      "recent_form_score": 8.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.017647349999999992,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 5,
+      "horse_name": "ロードレイジング",
+      "odds": 4.3,
+      "popularity": 2,
+      "bracket_number": 5,
+      "gender_age": "牡3",
+      "weight_dist": 58.0,
+      "jockey_name": "御神本訓",
+      "trainer_name": "加藤誠一",
+      "horse_weight": 450,
+      "recent_3_avg_speed": 40.0,
+      "last_race_position": 1,
+      "recent_form_score": 9.0,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.02521049999999999,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 6,
+      "horse_name": "ラウダーティオ",
+      "odds": 33.8,
+      "popularity": 9,
+      "bracket_number": 6,
+      "gender_age": "牡3",
+      "weight_dist": 57.0,
+      "jockey_name": "山中悠希",
+      "trainer_name": "森泰斗",
+      "horse_weight": 471,
+      "recent_3_avg_speed": 37.0,
+      "last_race_position": 5,
+      "recent_form_score": 6.0,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.03601499999999999,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 7,
+      "horse_name": "アイリーズ",
+      "odds": 24.1,
+      "popularity": 7,
+      "bracket_number": 7,
+      "gender_age": "牡3",
+      "weight_dist": 56.0,
+      "jockey_name": "石川倭",
+      "trainer_name": "小久保智",
+      "horse_weight": 467,
+      "recent_3_avg_speed": 37.5,
+      "last_race_position": 4,
+      "recent_form_score": 6.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.05144999999999999,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 8,
+      "horse_name": "モコパンチ",
+      "odds": 109.6,
+      "popularity": 10,
+      "bracket_number": 8,
+      "gender_age": "牡3",
+      "weight_dist": 57.0,
+      "jockey_name": "秋元耕成",
+      "trainer_name": "矢野義幸",
+      "horse_weight": 471,
+      "recent_3_avg_speed": 36.5,
+      "last_race_position": 6,
+      "recent_form_score": 5.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.07349999999999998,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 9,
+      "horse_name": "ウールドランジュ",
+      "odds": 328.5,
+      "popularity": 11,
+      "bracket_number": 8,
+      "gender_age": "牝3",
+      "weight_dist": 54.0,
+      "jockey_name": "吉留孝司",
+      "trainer_name": "平山真希",
+      "horse_weight": 456,
+      "recent_3_avg_speed": 35.0,
+      "last_race_position": 8,
+      "recent_form_score": 4.0,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.105,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 10,
+      "horse_name": "ベイビーモンストル",
+      "odds": 30.3,
+      "popularity": 8,
+      "bracket_number": 7,
+      "gender_age": "牡3",
+      "weight_dist": 56.0,
+      "jockey_name": "吉原寛人",
+      "trainer_name": "田中正人",
+      "horse_weight": 516,
+      "recent_3_avg_speed": 37.2,
+      "last_race_position": 4,
+      "recent_form_score": 6.2,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.16666666666666666,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 11,
+      "horse_name": "マッスル",
+      "odds": 10.3,
+      "popularity": 5,
+      "bracket_number": 8,
+      "gender_age": "牡3",
+      "weight_dist": 56.0,
+      "jockey_name": "笹川翼",
+      "trainer_name": "繁田健一",
+      "horse_weight": 483,
+      "recent_3_avg_speed": 38.8,
+      "last_race_position": 3,
+      "recent_form_score": 7.8,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.18333333333333335,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    },
+    {
+      "race_id": 202642010711,
+      "horse_number": 12,
+      "horse_name": "ストゥディア",
+      "odds": 337.7,
+      "popularity": 12,
+      "bracket_number": 8,
+      "gender_age": "牡3",
+      "weight_dist": 56.0,
+      "jockey_name": "木間塚龍",
+      "trainer_name": "矢野義幸",
+      "horse_weight": 504,
+      "recent_3_avg_speed": 34.5,
+      "last_race_position": 10,
+      "recent_form_score": 3.5,
+      "integrated_score": 3.9102757426842745,
+      "win_probability": 0.08333333333333333,
+      "place_probability": 0.20833333333333331,
+      "score_jockey_trainer": 3.9102757426842736,
+      "score_past_performance": 3.9102757426842736,
+      "weights_used": "{\"jockey_trainer_agent\": 0.4285714285714286, \"past_performance_agent\": 0.5714285714285715}"
+    }
+  ],
+  "positive_ev_bets": [
+    {
+      "bet_type": "win",
+      "horses": [
+        12
+      ],
+      "horse_names": [
+        "ストゥディア"
+      ],
+      "odds": 337.7,
+      "probability": 0.08333333333333333,
+      "ev": 27.141666666666666,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "win",
+      "horses": [
+        9
+      ],
+      "horse_names": [
+        "ウールドランジュ"
+      ],
+      "odds": 328.5,
+      "probability": 0.08333333333333333,
+      "ev": 26.375,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "place",
+      "horses": [
+        12
+      ],
+      "horse_names": [
+        "ストゥディア"
+      ],
+      "odds": 118.195,
+      "probability": 0.20833333333333331,
+      "ev": 23.62395833333333,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 10
+    },
+    {
+      "bet_type": "place",
+      "horses": [
+        9
+      ],
+      "horse_names": [
+        "ウールドランジュ"
+      ],
+      "odds": 114.975,
+      "probability": 0.105,
+      "ev": 11.072375,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 10
+    },
+    {
+      "bet_type": "win",
+      "horses": [
+        8
+      ],
+      "horse_names": [
+        "モコパンチ"
+      ],
+      "odds": 109.6,
+      "probability": 0.08333333333333333,
+      "ev": 8.133333333333333,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "place",
+      "horses": [
+        8
+      ],
+      "horse_names": [
+        "モコパンチ"
+      ],
+      "odds": 38.35999999999999,
+      "probability": 0.07349999999999998,
+      "ev": 1.819459999999999,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 10
+    },
+    {
+      "bet_type": "win",
+      "horses": [
+        6
+      ],
+      "horse_names": [
+        "ラウダーティオ"
+      ],
+      "odds": 33.8,
+      "probability": 0.08333333333333333,
+      "ev": 1.8166666666666664,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "win",
+      "horses": [
+        10
+      ],
+      "horse_names": [
+        "ベイビーモンストル"
+      ],
+      "odds": 30.3,
+      "probability": 0.08333333333333333,
+      "ev": 1.525,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "win",
+      "horses": [
+        7
+      ],
+      "horse_names": [
+        "アイリーズ"
+      ],
+      "odds": 24.1,
+      "probability": 0.08333333333333333,
+      "ev": 1.0083333333333333,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 1
+    },
+    {
+      "bet_type": "place",
+      "horses": [
+        10
+      ],
+      "horse_names": [
+        "ベイビーモンストル"
+      ],
+      "odds": 10.605,
+      "probability": 0.16666666666666666,
+      "ev": 0.7675000000000001,
+      "ev_rank": "S",
+      "confidence": 0.39102757426842744,
+      "priority": 10
+    }
+  ],
+  "recommendations": {
+    "total_budget": 10000.0,
+    "allocated_budget": 3400,
+    "expected_return": 52039.0,
+    "expected_profit": 48639.0,
+    "roi": 1430.6,
+    "recommendations": [
+      {
+        "bet_type": "win",
+        "horses": [
+          12
+        ],
+        "horse_names": [
+          "ストゥディア"
+        ],
+        "odds": 337.7,
+        "probability": 0.08333333333333333,
+        "ev": 27.141666666666666,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 400,
+        "expected_return": 11257.0
+      },
+      {
+        "bet_type": "win",
+        "horses": [
+          9
+        ],
+        "horse_names": [
+          "ウールドランジュ"
+        ],
+        "odds": 328.5,
+        "probability": 0.08333333333333333,
+        "ev": 26.375,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 400,
+        "expected_return": 10950.0
+      },
+      {
+        "bet_type": "win",
+        "horses": [
+          8
+        ],
+        "horse_names": [
+          "モコパンチ"
+        ],
+        "odds": 109.6,
+        "probability": 0.08333333333333333,
+        "ev": 8.133333333333333,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 300,
+        "expected_return": 2740.0
+      },
+      {
+        "bet_type": "win",
+        "horses": [
+          6
+        ],
+        "horse_names": [
+          "ラウダーティオ"
+        ],
+        "odds": 33.8,
+        "probability": 0.08333333333333333,
+        "ev": 1.8166666666666664,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 200,
+        "expected_return": 563.0
+      },
+      {
+        "bet_type": "win",
+        "horses": [
+          10
+        ],
+        "horse_names": [
+          "ベイビーモンストル"
+        ],
+        "odds": 30.3,
+        "probability": 0.08333333333333333,
+        "ev": 1.525,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 200,
+        "expected_return": 505.0
+      },
+      {
+        "bet_type": "win",
+        "horses": [
+          7
+        ],
+        "horse_names": [
+          "アイリーズ"
+        ],
+        "odds": 24.1,
+        "probability": 0.08333333333333333,
+        "ev": 1.0083333333333333,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 1,
+        "bet_amount": 200,
+        "expected_return": 402.0
+      },
+      {
+        "bet_type": "place",
+        "horses": [
+          12
+        ],
+        "horse_names": [
+          "ストゥディア"
+        ],
+        "odds": 118.195,
+        "probability": 0.20833333333333331,
+        "ev": 23.62395833333333,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 10,
+        "bet_amount": 800,
+        "expected_return": 19699.0
+      },
+      {
+        "bet_type": "place",
+        "horses": [
+          9
+        ],
+        "horse_names": [
+          "ウールドランジュ"
+        ],
+        "odds": 114.975,
+        "probability": 0.105,
+        "ev": 11.072375,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 10,
+        "bet_amount": 400,
+        "expected_return": 4829.0
+      },
+      {
+        "bet_type": "place",
+        "horses": [
+          8
+        ],
+        "horse_names": [
+          "モコパンチ"
+        ],
+        "odds": 38.35999999999999,
+        "probability": 0.07349999999999998,
+        "ev": 1.819459999999999,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 10,
+        "bet_amount": 200,
+        "expected_return": 564.0
+      },
+      {
+        "bet_type": "place",
+        "horses": [
+          10
+        ],
+        "horse_names": [
+          "ベイビーモンストル"
+        ],
+        "odds": 10.605,
+        "probability": 0.16666666666666666,
+        "ev": 0.7675000000000001,
+        "ev_rank": "S",
+        "confidence": 0.39102757426842744,
+        "priority": 10,
+        "bet_amount": 300,
+        "expected_return": 530.0
+      }
+    ],
+    "risk_level": "low",
+    "strategy_used": "balanced"
+  }
+}
