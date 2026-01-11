@@ -12,6 +12,32 @@
 - 🌐 ブラウザベースのWeb UI (Streamlit)
 - 🐳 Docker対応
 
+### 専門家AI（9つ）
+
+| エージェント | 重み | 責務 |
+|-------------|------|------|
+| **過去成績分析AI** | 20% | 直近成績の分析・調子トレンド |
+| **距離適性分析AI** | 15% | 距離とコースの相性 |
+| **騎手・調教師分析AI** | 15% | 人的要因の分析・コンビネーション相性 |
+| **血統分析AI** | 10% | 血統からの適性判断 |
+| **レースペース分析AI** | 12% | ペース予測・展開予想 |
+| **馬体・コンディション分析AI** | 8% | フィジカルコンディション・馬体重 |
+| **馬場・天候適性分析AI** | 10% | 馬場状態・コース適性 |
+| **統計パターン分析AI** | 5% | 歴史的パターン・ラップタイム分析 |
+| **オッズ分析AI** | 5% | 市場分析・オッズの歪み検出 |
+
+### アーキテクチャ
+
+```
+データ収集 → 前処理 → 9つの専門家AI → オーケストレーター → EV計算 → 買い目生成
+```
+
+**オーケストレーター**:
+- 9つのエージェントのスコアを統合（加重平均）
+- 動的重み付け（レース条件に応じた最適化）
+- Softmax正規化で勝率・3着内率を算出
+- 信頼区間の計算（ブートストラップ法）
+
 ## クイックスタート
 
 ### インストール
@@ -27,9 +53,12 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # パッケージをインストール
 pip install -e ".[dev]"
+
+# 設定の初期化
+keiba-ai config wizard
 ```
 
-### 基本的な使い方
+### 基本的な使い方 (CLI)
 
 ```bash
 # ヘルプ表示
@@ -45,7 +74,7 @@ keiba-ai preprocess --input data/raw/ --output data/processed/
 keiba-ai train --data data/processed/training_data.csv
 
 # 予測実行
-keiba-ai predict --date 2025-01-12 --strategy balanced --budget 10000
+keiba-ai predict --date 2025-01-11 --strategy balanced --budget 10000
 
 # バックテスト
 keiba-ai backtest --start-date 2024-01-01 --end-date 2024-12-31
@@ -66,22 +95,6 @@ docker-compose build
 docker-compose run keiba-ai keiba-ai --help
 ```
 
-## システム構成
-
-### 専門家AI（9つ）
-
-| エージェント | 重み | 責務 |
-|-------------|------|------|
-| 前走パフォーマンスAI | 20% | 直近成績の分析 |
-| 距離・コース適性AI | 15% | 距離とコースの相性 |
-| 騎手・調教師AI | 15% | 人的要因の分析 |
-| 血統AI | 10% | 血統からの適性判断 |
-| レース展開AI | 12% | ペース予測 |
-| 馬体・調教AI | 8% | フィジカルコンディション |
-| 馬場・天候AI | 10% | 馬場状態の分析 |
-| 統計パターンAI | 5% | 歴史的パターン |
-| オッズ分析AI | 5% | 市場分析 |
-
 ## プロジェクト構造
 
 ```
@@ -92,11 +105,12 @@ MakeMoneyFromKeiba/
 │   ├── data_collection/  # データ収集
 │   ├── evaluation/       # 評価・バックテスト
 │   ├── monitoring/       # 監視・運用
-│   ├── orchestrator/     # 予測統合
+│   ├── orchestrator/     # 予測統合・EV計算
 │   ├── preprocessing/    # データ前処理
 │   ├── training/         # モデル訓練
+│   ├── analysis/         # 分析ツール
 │   └── web/              # Web UI (Streamlit)
-├── config/               # 設定ファイル
+├── config/               # 設定
 ├── data/                 # データ（Git除外）
 ├── docker/               # Docker設定
 ├── docs/                 # ドキュメント
@@ -106,18 +120,30 @@ MakeMoneyFromKeiba/
 └── tests/                # テスト
 ```
 
+## パフォーマンス目標
+
+### 戦略別目標
+
+| 戦略 | 回収率 | シャープレシオ | 最大DD | 月次勝率 |
+|------|--------|--------------|--------|----------|
+| **Conservative** | 105-110% | > 1.0 | < 10% | > 70% |
+| **Balanced** | 110-120% | > 1.2 | < 15% | > 60% |
+| **Aggressive** | 120-140% | > 0.8 | < 25% | > 50% |
+
+### エージェント性能目標
+
+- 🎯 各エージェントのRMSE < 1.5（スコア予測誤差1.5点以内）
+- 🎯 R² > 0.4（モデルの説明力40%以上）
+- 🎯 Top3 Accuracy > 30%（上位3頭の予測精度30%以上）
+
 ## ドキュメント
 
 - [クイックスタート](docs/user_guide/quickstart.md)
 - [CLIリファレンス](docs/user_guide/cli_reference.md)
 - [トラブルシューティング](docs/user_guide/troubleshooting.md)
 - [設計書](docs/DESIGN.md)
-
-## パフォーマンス目標
-
-- 🎯 回収率: 105-115%
-- 🎯 的中率: 40-50%
-- 🎯 NDCG@3: 0.65以上
+- [インストールガイド](docs/user_guide/installation.md)
+- [設定ガイド](docs/user_guide/configuration.md)
 
 ## 開発
 
@@ -125,17 +151,14 @@ MakeMoneyFromKeiba/
 
 ```bash
 pytest tests/ -v
+# カバレッジ確認
+pytest --cov=src --cov-report=html
 ```
 
-### コードフォーマット
+### コードフォーマット/チェック
 
 ```bash
 black src/ tests/
-```
-
-### 型チェック
-
-```bash
 mypy src/
 ```
 
@@ -149,4 +172,4 @@ MIT License
 
 ---
 
-*最終更新: 2026-01-10*
+*最終更新: 2026-01-11*
