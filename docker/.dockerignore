@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.eggs
+*.egg-info
+dist
+build
+
+# 仮想環境
+venv
+.venv
+env
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# データ（大容量）
+data/raw/*.csv
+data/processed/*.csv
+data/features/*.csv
+
+# モデル（訓練済み）
+models/*.pkl
+models/*.joblib
+
+# ログ
+logs/
+*.log
+
+# レポート
+reports/*.html
+reports/*.json
+
+# Jupyter
+notebooks/
+.ipynb_checkpoints
+
+# テスト
+.pytest_cache
+.coverage
+htmlcov
+
+# その他
+.DS_Store
+*.tmp
+*.bak
