@@ -116,20 +116,27 @@ class BaseAgent(ABC):
         Returns:
             特徴量DataFrame
         """
-        required_features = self._get_feature_list()
-        available_features = [f for f in required_features if f in df.columns]
-        missing_features = [f for f in required_features if f not in df.columns]
+        if self.model is not None and hasattr(self.model, 'feature_name_'):
+            required_features = self.model.feature_name_
+        else:
+            required_features = self._get_feature_list()
         
-        if missing_features:
-            self.logger.warning(f"Missing features: {missing_features}")
+        # すべての要求される特徴量を確保（欠落している場合は0で埋める）
+        X = pd.DataFrame(index=df.index)
+        for f in required_features:
+            if f in df.columns:
+                # 型変換
+                try:
+                    X[f] = pd.to_numeric(df[f], errors='coerce')
+                except:
+                    X[f] = 0.0
+            else:
+                X[f] = 0.0
         
-        # 利用可能な特徴量のみ使用
-        X = df[available_features].copy()
-        
-        # 欠損値を0で埋める
+        # NaNを0で埋める
         X = X.fillna(0)
         
-        self.feature_columns = available_features
+        self.feature_columns = required_features
         return X
     
     def train(self, X: pd.DataFrame, y: pd.Series, 

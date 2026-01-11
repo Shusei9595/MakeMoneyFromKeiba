@@ -20,7 +20,8 @@ from data_collection.netkeiba_scraper import (
     RaceResultScraper,
     HorseInfoScraper,
     JockeyTrainerScraper,
-    OddsDataScraper
+    OddsDataScraper,
+    LiveRaceScraper
 )
 from data_collection.data_validator import DataValidator
 
@@ -313,6 +314,93 @@ def collect_odds(race_id, odds_type, output_dir, config):
         
     except Exception as e:
         console.print(f"\n[bold red]❌ エラーが発生しました: {e}[/bold red]")
+        raise
+
+
+@cli.command()
+@click.option('--date', required=True, help='対象日 (YYYYMMDD)')
+@click.option('--output-dir', default='data/raw', help='出力先ディレクトリ')
+@click.option('--config', default='config/scraping_config.yaml', help='設定ファイルパス')
+@click.option('--log-dir', default='logs', help='ログディレクトリ')
+def collect_live(date, output_dir, config, log_dir):
+    """
+    最新レース（ライブデータ）を収集
+    
+    使用例:
+    python run_collection.py collect-live --date 20260107
+    """
+    console = Console()
+    logger = setup_logging(log_dir)
+    
+    console.print("\n[bold blue]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold blue]")
+    console.print("[bold blue]  競馬データ収集システム - ライブ収集[/bold blue]")
+    console.print("[bold blue]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold blue]\n")
+    
+    try:
+        with open(config) as f:
+            config_data = yaml.safe_load(f)
+        
+        scraper = LiveRaceScraper(config_data)
+        
+        # レース一覧取得
+        console.print(f"[cyan]📅 対象日:[/cyan] {date}")
+        race_ids = scraper.scrape_race_list(date)
+        
+        if not race_ids:
+            console.print("[bold yellow]⚠️ レースが見つかりませんでした[/bold yellow]")
+            return
+            
+        console.print(f"✓ [green]{len(race_ids)}[/green] レース発見")
+        
+        all_live_data = []
+        
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+            console=console
+        ) as progress:
+            task = progress.add_task("[cyan]出馬表収集中...", total=len(race_ids))
+            
+            for rid in race_ids:
+                df_shutuba = scraper.scrape_shutuba(rid)
+                if not df_shutuba.empty:
+                    # 結果も取得（最新なので確定しているはず）
+                    df_results = scraper.scrape_results(rid)
+                    if not df_results.empty:
+                        # 結合（簡易版）
+                        df_merged = pd.merge(
+                            df_shutuba, 
+                            df_results[['horse_number', 'finish_position']], 
+                            on='horse_number', 
+                            how='left'
+                        )
+                        all_live_data.append(df_merged)
+                progress.advance(task)
+        
+        if not all_live_data:
+            console.print("[bold yellow]⚠️ 出馬表が取得できませんでした[/bold yellow]")
+            return
+            
+        # 統合
+        final_df = pd.concat(all_live_data, ignore_index=True)
+        
+        # 日付カラム追加
+        import pandas as pd
+        final_df['race_date'] = f"{date[:4]}-{date[4:6]}-{date[6:]}"
+        
+        # 保存
+        output_path = Path(output_dir) / f"live_races_{date}.csv"
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        final_df.to_csv(output_path, index=False, encoding='utf-8-sig')
+        
+        console.print(f"\n[bold green]✓ 保存完了:[/bold green] {output_path}")
+        logger.info(f"Saved {len(final_df)} live race records to {output_path}")
+        
+    except Exception as e:
+        console.print(f"\n[bold red]❌ エラーが発生しました: {e}[/bold red]")
+        logger.error(f"Error during live collection: {e}", exc_info=True)
         raise
 
 

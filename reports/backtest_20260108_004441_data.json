@@ -1,0 +1,41 @@
+{
+  "metrics": {
+    "recovery_rate": 150.0,
+    "roi": 50.0,
+    "net_profit": 51350.0,
+    "total_investment": 102700,
+    "total_payout": 154050.0,
+    "hit_rate": 100.0,
+    "hit_rate_by_type": {
+      "wide": 100.0
+    },
+    "max_drawdown": 0,
+    "max_drawdown_period": [
+      "2024-01-06",
+      "2024-01-06"
+    ],
+    "sharpe_ratio": 0.0,
+    "sortino_ratio": Infinity,
+    "win_rate": 20.0,
+    "payoff_ratio": 0.0,
+    "longest_winning_streak": 1,
+    "longest_losing_streak": 0,
+    "total_races": 15,
+    "total_bets": 3,
+    "total_hits": 3
+  },
+  "summary": {
+    "total_races": 15,
+    "total_bets": 3,
+    "total_hits": 3,
+    "hit_rate": 100.0,
+    "total_investment": 102700,
+    "total_payout": 154050.0,
+    "net_profit": 51350.0,
+    "recovery_rate": 150.0,
+    "roi": 50.0
+  },
+  "strategy": "balanced",
+  "initial_budget": 100000.0,
+  "final_budget": 151350.0
+}

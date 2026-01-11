@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  keiba-ai:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: keiba-ai
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+      - ../results:/app/results
+      - ../reports:/app/reports
+      - ../config:/app/config
+    environment:
+      - KEIBA_CONFIG=/app/config/config.yaml
+    command: ["keiba-ai", "--help"]
+
+  web-ui:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: keiba-ai-web
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../data:/app/data
+      - ../models:/app/models
+      - ../results:/app/results
+      - ../config:/app/config
+    environment:
+      - KEIBA_CONFIG=/app/config/config.yaml
+    depends_on:
+      - keiba-ai
+    command: ["streamlit", "run", "src/web/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
