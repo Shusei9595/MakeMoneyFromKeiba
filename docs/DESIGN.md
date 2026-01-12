@@ -53,6 +53,21 @@
   - 時系列特徴量の生成
   - 欠損値処理
 
+> **⚠️ データリーク防止**
+> 
+> 累積統計（`career_win_rate`, `track_win_rate` 等）は必ず `shift(1)` を使用して
+> **現在のレース結果を除外**する必要があります。これにより、予測時に未来の情報が
+> 漏れることを防ぎます。
+> 
+> ```python
+> # 正しい実装
+> df['career_wins'] = df.groupby('horse_id')['is_win'].cumsum().shift(1).fillna(0)
+> 
+> # 誤った実装（データリーク発生）
+> df['career_wins'] = df.groupby('horse_id')['is_win'].cumsum()
+> ```
+
+
 #### マルチエージェントシステム (Multi-Agent System)
 - **責務**: 9つの専門家AIによる予測生成
 - **実装**: `src/agents/` ディレクトリ

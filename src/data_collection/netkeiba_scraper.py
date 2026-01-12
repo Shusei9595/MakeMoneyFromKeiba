@@ -21,14 +21,21 @@ class BaseScraper:
         Args:
             config: scraping_config.yaml から読み込んだ設定
         """
-        self.base_url = config['base_url']
-        self.request_interval = config['request_interval']
-        self.timeout = config['timeout']
-        self.user_agent = config['user_agent']
-        self.max_retries = config['max_retries']
+        self.base_url = config.get('base_url', 'https://db.netkeiba.com')
+        self.request_interval = config.get('request_interval', 1.0)
+        self.timeout = config.get('timeout', 30)
+        self.user_agent = config.get('user_agent', 'Mozilla/5.0')
+        self.max_retries = config.get('max_retries', 3)
         self.retry_delay = config.get('error_handling', {}).get('retry_delay', 2.0)
         self.exponential_backoff = config.get('error_handling', {}).get('exponential_backoff', True)
         self.skip_on_error = config.get('error_handling', {}).get('skip_on_error', True)
+        
+        # モバイルサイトフォールバック設定
+        mobile_config = config.get('mobile_fallback', {})
+        self.use_mobile_fallback = mobile_config.get('enabled', True)
+        self.mobile_base_url = mobile_config.get('mobile_base_url', 'https://sp.netkeiba.com')
+        self.mobile_user_agent = mobile_config.get('mobile_user_agent', 
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15')
         
         self.session = requests.Session()
         self.session.headers.update({'User-Agent': self.user_agent})
@@ -77,8 +84,21 @@ class BaseScraper:
                         self.logger.info(f"Retrying in {delay} seconds...")
                         time.sleep(delay)
                         continue
+                elif response.status_code == 400:
+                    self.logger.warning(f"Bad Request (400): {url}")
+                    # モバイルサイトにフォールバック
+                    if self.use_mobile_fallback and 'db.netkeiba.com' in url:
+                        mobile_url = url.replace('db.netkeiba.com', 'sp.netkeiba.com')
+                        self.logger.info(f"Falling back to mobile site: {mobile_url}")
+                        return self._get_page_mobile(mobile_url)
+                    return None
                 else:
                     self.logger.error(f"HTTP {response.status_code}: {url}")
+                    # 他のエラーでもモバイルサイトにフォールバックを試行
+                    if self.use_mobile_fallback and 'db.netkeiba.com' in url:
+                        mobile_url = url.replace('db.netkeiba.com', 'sp.netkeiba.com')
+                        self.logger.info(f"Falling back to mobile site: {mobile_url}")
+                        return self._get_page_mobile(mobile_url)
                     return None
                     
             except requests.Timeout:
@@ -99,6 +119,67 @@ class BaseScraper:
         
         return None
 
+    def _get_page_mobile(self, url: str) -> Optional[BeautifulSoup]:
+        """
+        モバイル版サイトからページを取得
+        
+        PC版サイトが失敗した場合のフォールバック用
+        - モバイル用User-Agentを使用
+        - UTF-8エンコーディング（モバイル版はUTF-8）
+        
+        Returns:
+            BeautifulSoup object or None (失敗時)
+        """
+        # レート制限
+        elapsed = time.time() - self.last_request_time
+        if elapsed < self.request_interval:
+            time.sleep(self.request_interval - elapsed)
+        
+        # モバイル用ヘッダーを設定
+        headers = {'User-Agent': self.mobile_user_agent}
+        
+        for attempt in range(self.max_retries):
+            try:
+                self.logger.debug(f"Fetching mobile URL: {url} (attempt {attempt + 1}/{self.max_retries})")
+                
+                response = self.session.get(url, timeout=self.timeout, headers=headers)
+                self.last_request_time = time.time()
+                
+                if response.status_code == 200:
+                    self.logger.info(f"Successfully fetched (mobile): {url}")
+                    # モバイル版はUTF-8
+                    response.encoding = 'utf-8'
+                    return BeautifulSoup(response.text, 'html.parser')
+                elif response.status_code == 404:
+                    self.logger.warning(f"Page not found (404) on mobile: {url}")
+                    return None
+                elif response.status_code >= 500:
+                    self.logger.warning(f"Server error ({response.status_code}) on mobile: {url}")
+                    if attempt < self.max_retries - 1:
+                        delay = self.retry_delay * (2 ** attempt if self.exponential_backoff else 1)
+                        self.logger.info(f"Retrying mobile in {delay} seconds...")
+                        time.sleep(delay)
+                        continue
+                else:
+                    self.logger.error(f"HTTP {response.status_code} on mobile: {url}")
+                    return None
+                    
+            except requests.Timeout:
+                self.logger.warning(f"Timeout fetching mobile {url}")
+                if attempt < self.max_retries - 1:
+                    delay = self.retry_delay * (2 ** attempt if self.exponential_backoff else 1)
+                    time.sleep(delay)
+                    continue
+                return None
+            except requests.RequestException as e:
+                self.logger.error(f"Mobile request error: {e}")
+                if attempt < self.max_retries - 1:
+                    delay = self.retry_delay * (2 ** attempt if self.exponential_backoff else 1)
+                    time.sleep(delay)
+                    continue
+                return None
+        
+        return None
     def _extract_id(self, url: str) -> str:
         """URLからIDを抽出 (horse, jockey, trainer共通)"""
         if not url:
