@@ -55,3 +55,9 @@ output:
   format: "csv"  # csv, parquet, json
   encoding: "utf-8-sig"  # UTF-8 with BOM（Excelで開く用）
   compression: null  # null, gzip, bz2, xz
+
+# モバイルサイトフォールバック設定
+mobile_fallback:
+  enabled: true  # PC版が失敗した場合にモバイル版を試行
+  mobile_base_url: "https://sp.netkeiba.com"
+  mobile_user_agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"
