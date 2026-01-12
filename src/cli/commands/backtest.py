@@ -70,13 +70,29 @@ def backtest(ctx, start_date, end_date, strategies, budget, output, benchmark):
             
             results = {}
             for strategy in strategy_list:
+                # 依存関係を初期化
+                from src.orchestrator.agent_manager import AgentManager
+                from src.orchestrator.prediction_orchestrator import PredictionOrchestrator
+                from src.orchestrator.weight_optimizer import WeightOptimizer
+                from src.orchestrator.ev_calculator import EVCalculator
+                from src.orchestrator.betting_recommender import BettingRecommender
+                
+                agent_manager = AgentManager(model_dir='models')
+                weight_optimizer = WeightOptimizer()
+                orchestrator = PredictionOrchestrator(agent_manager, weight_optimizer)
+                ev_calculator = EVCalculator()
+                recommender = BettingRecommender(total_budget=budget)
+                
                 backtester = Backtester(
-                    initial_budget=budget,
-                    strategy=strategy
+                    orchestrator=orchestrator,
+                    ev_calculator=ev_calculator,
+                    recommender=recommender,
+                    initial_budget=budget
                 )
-                result = backtester.run(df)
+                result = backtester.run_backtest(df, strategy=strategy)
                 results[strategy] = result
                 progress.advance(task)
+
         
         # レポート生成
         report_lines = [
@@ -92,10 +108,12 @@ def backtest(ctx, start_date, end_date, strategies, budget, output, benchmark):
         ]
         
         for strategy, result in results.items():
-            roi = (result.get('final_budget', budget) / budget - 1) * 100
-            hit_rate = result.get('hit_rate', 0) * 100
+            summary = result.get('summary', {})
+            final_budget = result.get('final_budget', budget)
+            roi = (final_budget / budget - 1) * 100
+            hit_rate = summary.get('hit_rate', 0)
             report_lines.append(
-                f"<tr><td>{strategy}</td><td>{result.get('final_budget', budget):,}円</td>"
+                f"<tr><td>{strategy}</td><td>{final_budget:,.0f}円</td>"
                 f"<td>{roi:+.1f}%</td><td>{hit_rate:.1f}%</td></tr>"
             )
         
