@@ -169,29 +169,33 @@ class FeatureEngineer:
             )
         
         # 累積経験値（レースごとに更新）
+        # 注意: 現在のレースを含まないようshift(1)
         if 'distance' in df.columns:
             df['distance_experience_count'] = df.groupby(
                 ['horse_id', 'distance']
-            ).cumcount()
+            ).cumcount()  # 0始まりなのでshift不要（現在のレースはカウントされない）
         
         if 'track_name' in df.columns:
             df['track_experience_count'] = df.groupby(
                 ['horse_id', 'track_name']
-            ).cumcount()
+            ).cumcount()  # 0始まりなのでshift不要
         
         # 距離別勝率（過去の成績から計算）
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'distance' in df.columns and 'is_win' in df.columns:
-            df['distance_wins'] = df.groupby(['horse_id', 'distance'])['is_win'].cumsum()
+            df['distance_wins'] = df.groupby(['horse_id', 'distance'])['is_win'].cumsum().shift(1).fillna(0)
             df['distance_win_rate'] = df['distance_wins'] / (df['distance_experience_count'] + 1)
         
         # 競馬場別勝率
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'track_name' in df.columns and 'is_win' in df.columns:
-            df['track_wins'] = df.groupby(['horse_id', 'track_name'])['is_win'].cumsum()
+            df['track_wins'] = df.groupby(['horse_id', 'track_name'])['is_win'].cumsum().shift(1).fillna(0)
             df['track_win_rate'] = df['track_wins'] / (df['track_experience_count'] + 1)
         
         # 芝/ダート別勝率
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'track_type' in df.columns and 'is_win' in df.columns:
-            df['track_type_wins'] = df.groupby(['horse_id', 'track_type'])['is_win'].cumsum()
+            df['track_type_wins'] = df.groupby(['horse_id', 'track_type'])['is_win'].cumsum().shift(1).fillna(0)
             df['track_type_experience'] = df.groupby(['horse_id', 'track_type']).cumcount()
             df['track_type_win_rate'] = df['track_type_wins'] / (df['track_type_experience'] + 1)
         
@@ -222,16 +226,18 @@ class FeatureEngineer:
         df = df.copy()
         
         # 騎手の全体勝率（累積）
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'jockey_id' in df.columns and 'is_win' in df.columns:
-            df['jockey_race_count'] = df.groupby('jockey_id').cumcount() + 1
-            df['jockey_wins'] = df.groupby('jockey_id')['is_win'].cumsum()
-            df['jockey_win_rate_overall'] = df['jockey_wins'] / df['jockey_race_count']
+            df['jockey_race_count'] = df.groupby('jockey_id').cumcount()  # 0始まり
+            df['jockey_wins'] = df.groupby('jockey_id')['is_win'].cumsum().shift(1).fillna(0)
+            df['jockey_win_rate_overall'] = df['jockey_wins'] / (df['jockey_race_count'] + 1)
         
         # 調教師の全体勝率（累積）
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'trainer_id' in df.columns and 'is_win' in df.columns:
-            df['trainer_race_count'] = df.groupby('trainer_id').cumcount() + 1
-            df['trainer_wins'] = df.groupby('trainer_id')['is_win'].cumsum()
-            df['trainer_win_rate_overall'] = df['trainer_wins'] / df['trainer_race_count']
+            df['trainer_race_count'] = df.groupby('trainer_id').cumcount()  # 0始まり
+            df['trainer_wins'] = df.groupby('trainer_id')['is_win'].cumsum().shift(1).fillna(0)
+            df['trainer_win_rate_overall'] = df['trainer_wins'] / (df['trainer_race_count'] + 1)
         
         # 騎手×馬の組み合わせ
         if 'jockey_id' in df.columns and 'horse_id' in df.columns:
@@ -242,7 +248,7 @@ class FeatureEngineer:
             if 'is_win' in df.columns:
                 df['jockey_horse_combination_wins'] = df.groupby(
                     ['jockey_id', 'horse_id']
-                )['is_win'].cumsum()
+                )['is_win'].cumsum().shift(1).fillna(0)  # 現在のレースを含まない
         
         return df
     
@@ -315,22 +321,28 @@ class FeatureEngineer:
         df = df.copy()
         
         # 通算成績
-        df['career_total_races'] = df.groupby('horse_id').cumcount() + 1
+        # 注意: 現在のレースを含まないように計算
+        df['career_total_races'] = df.groupby('horse_id').cumcount()  # 0始まり（現在のレースを含まない）
         
         if 'is_win' in df.columns:
-            df['career_total_wins'] = df.groupby('horse_id')['is_win'].cumsum()
-            df['career_win_rate'] = df['career_total_wins'] / df['career_total_races']
+            # 現在のレース結果を含まないようshift(1)
+            df['career_total_wins'] = df.groupby('horse_id')['is_win'].cumsum().shift(1).fillna(0)
+            df['career_win_rate'] = df['career_total_wins'] / (df['career_total_races'] + 1)
+            # 初出走の場合は0
+            df.loc[df['career_total_races'] == 0, 'career_win_rate'] = 0.0
         
         # 連対・複勝
+        # 注意: 現在のレース結果を含まないようshift(1)
         if 'finish_position' in df.columns:
             df['is_place'] = (df['finish_position'] <= 2).astype(int)
             df['is_show'] = (df['finish_position'] <= 3).astype(int)
+            # 現在のレースを含まない累積平均
             df['career_place_rate'] = df.groupby('horse_id')['is_place'].transform(
-                lambda x: x.expanding().mean()
-            )
+                lambda x: x.expanding().mean().shift(1)
+            ).fillna(0)
             df['career_show_rate'] = df.groupby('horse_id')['is_show'].transform(
-                lambda x: x.expanding().mean()
-            )
+                lambda x: x.expanding().mean().shift(1)
+            ).fillna(0)
         
         # 直近調子スコア（加重平均: 最近ほど重み大）
         def weighted_recent_form(positions):
